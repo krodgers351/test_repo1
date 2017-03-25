@@ -30,7 +30,7 @@
                 </tr>
                 <tr data-th-each="entry : ${communities}">
                     <td data-th-text="${entry.id}"></td>
-                    <td data-th-text="${entry.community}"></td>
+                    <td data-th-text="${entry.communityName}"></td>
                 </tr>
             </table>
         </div>
@@ -38,7 +38,7 @@
         <div id="addEntry">
             <h2>Add a New Community</h2>
             <form data-th-action="@{/communities/add}" name="addCommunityForm" method="post">
-                Community: <input type="text" name="community" /><br />
+                Community: <input type="text" name="communityName" /><br />
                 <input class="button" type="submit" value="Add Community" />
             </form>
         </div>

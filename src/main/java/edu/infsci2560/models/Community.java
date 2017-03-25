@@ -24,21 +24,21 @@ public class Community {
 	@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     protected Long id;
-	protected String community;
+	protected String communityName;
 
 	public Community(){
 		this.id = Long.MAX_VALUE;
-		this.community = null;
+		this.communityName = null;
 	}
 
-	public Community(Long id, String community){
+	public Community(Long id, String communityName){
 		this.id = id;
-		this.community = community;
+		this.communityName = communityName;
 	}
 
 	@Override
     public String toString() {
-        return "[ community =" + this.community  + " ]";
+        return "[ community =" + this.communityName  + " ]";
     }
 
 	@Override
@@ -69,13 +69,13 @@ public class Community {
      * @return the community
      */
     public String getCommunity() {
-        return community;
+        return communityName;
     }
 
     /**
      * @param community the community to set
      */
-    public void setCommunity(String community) {
-        this.community = community;
+    public void setCommunity(String communityName) {
+        this.communityName = communityName;
     }
 }

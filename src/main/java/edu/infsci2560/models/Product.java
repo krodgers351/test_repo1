@@ -18,27 +18,27 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  * @author KRodgers
  */
 @Entity
-public class Community {
+public class Product {
     private static final long serialVersionUID = 1L;
 	
 	@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     protected Long id;
-	protected String community;
+	protected String productName;
 
-	public Community(){
+	public Product(){
 		this.id = Long.MAX_VALUE;
-		this.categoryName = null;
+		this.productName = null;
 	}
 
-	public Community(Long id, String community){
+	public Product(Long id, String name){
 		this.id = id;
-		this.community = community;
+		this.productName = name;
 	}
 
 	@Override
     public String toString() {
-        return "[ community =" + this.community  + " ]";
+        return "[ product =" + this.productName  + " ]";
     }
 
 	@Override
@@ -66,16 +66,16 @@ public class Community {
     }
 
 	/**
-     * @return the community
+     * @return the productName
      */
-    public String getCommunity() {
-        return community;
+    public String getProductName() {
+        return productName;
     }
 
     /**
-     * @param community the community to set
+     * @param productName the productName to set
      */
-    public void setCommunity(String community) {
-        this.community = community;
+    public void setProductName(String productName) {
+        this.productName = productName;
     }
 }

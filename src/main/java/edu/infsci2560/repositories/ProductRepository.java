@@ -5,11 +5,11 @@
  */
 package edu.infsci2560.repositories;
 
-import edu.infsci2560.models.Community;
+import edu.infsci2560.models.Product;
 import org.springframework.data.repository.PagingAndSortingRepository;
 
 /**
  *
  * @author KRodgers
  */
-public interface CommunityRepository extends PagingAndSortingRepository<Community, Long> {}
+public interface ProductRepository extends PagingAndSortingRepository<Product, Long> {}

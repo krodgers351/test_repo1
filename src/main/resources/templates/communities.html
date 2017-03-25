@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <title>Document Categories</title>
+    <title>Communities</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" th:href="@{/css/styles.css}" href="../../css/styles.css" />
@@ -26,20 +26,20 @@
             <table id="catalog">
                 <tr>
                     <th>ID</th>
-                    <th>Category</th>
+                    <th>Community</th>
                 </tr>
-                <tr data-th-each="entry : ${documentcategories}">
+                <tr data-th-each="entry : ${communities}">
                     <td data-th-text="${entry.id}"></td>
-                    <td data-th-text="${entry.categoryName}"></td>
+                    <td data-th-text="${entry.community}"></td>
                 </tr>
             </table>
         </div>
         <hr />
         <div id="addEntry">
-            <h2>Add a New Document Category</h2>
-            <form data-th-action="@{/documentcategories/add}" name="addDocumentCategoryForm" method="post">
-                Category: <input type="text" name="documentCategory" /><br />
-                <input class="button" type="submit" value="Add Category" />
+            <h2>Add a New Community</h2>
+            <form data-th-action="@{/communities/add}" name="addCommunityForm" method="post">
+                Community: <input type="text" name="community" /><br />
+                <input class="button" type="submit" value="Add Community" />
             </form>
         </div>
         <hr />

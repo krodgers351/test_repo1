@@ -5,8 +5,8 @@
  */
 package edu.infsci2560.controllers;
 
-import edu.infsci2560.models.Community;
-import edu.infsci2560.repositories.CommunityRepository;
+import edu.infsci2560.models.Department;
+import edu.infsci2560.repositories.DepartmentRepository;
 import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
@@ -25,19 +25,19 @@ import org.springframework.web.servlet.ModelAndView;
  * @author KRodgers
  */
 @Controller
-public class CommunitiesController {    
+public class DepartmentsController {    
 	@Autowired
-    private CommunityRepository repository;
+    private DepartmentRepository repository;
     
-    @RequestMapping(value = "communities", method = RequestMethod.GET)
+    @RequestMapping(value = "departments", method = RequestMethod.GET)
     public ModelAndView index() {        
-        return new ModelAndView("communities", "communities", repository.findAll());
+        return new ModelAndView("departments", "departments", repository.findAll());
     }
     
-    @RequestMapping(value = "documentcategories/add", method = RequestMethod.POST, consumes="application/x-www-form-urlencoded", produces = "application/json")
-    public ModelAndView create(@ModelAttribute @Valid Community community, BindingResult result) {
-        repository.save(community);
-        return new ModelAndView("communities", "communities", repository.findAll());
+    @RequestMapping(value = "departments/add", method = RequestMethod.POST, consumes="application/x-www-form-urlencoded", produces = "application/json")
+    public ModelAndView create(@ModelAttribute @Valid Department department, BindingResult result) {
+        repository.save(department);
+        return new ModelAndView("departments", "departments", repository.findAll());
     }
 
 }

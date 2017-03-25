@@ -38,6 +38,7 @@ public class KMCatalogEntry {
     protected String audience;
 	protected String documentCategory;
     protected String community;
+	protected String product;
     protected String documentFilename;
     
     public KMCatalogEntry(){
@@ -47,23 +48,25 @@ public class KMCatalogEntry {
         this.audience = null;
 		this.documentCategory = null;
         this.community = null;
+		this.product = null;
         this.documentFilename = null;
     }
     
-    public KMCatalogEntry(Long id, String title, String owner, String audience, String category, String community, String filename){
+    public KMCatalogEntry(Long id, String title, String owner, String audience, String category, String community, String product, String filename){
         this.id = id;
         this.documentTitle = title;
         this.knowledgeOwner = owner;
         this.audience = audience;
         this.documentCategory = category;
         this.community = community;
+		this.product = product
         this.documentFilename = filename;
     }
     
     @Override
     public String toString() {
         return "[ id=" + this.id + ", title=" + this.documentTitle + ", knowledge owner=" + this.knowledgeOwner + ", audience=" + this.audience + ", category=" 
-                + this.documentCategory + ", community=" + this.community + ", filename=" + this.documentFilename + " ]";
+                + this.documentCategory + ", community=" + this.community + ", product=" + this.product + ", filename=" + this.documentFilename + " ]";
     }
 
     @Override
@@ -158,6 +161,20 @@ public class KMCatalogEntry {
      */
     public void setCommunity(String community) {
         this.community = community;
+    }
+
+	/**
+     * @return the product
+     */
+    public String getProduct() {
+        return product;
+    }
+
+    /**
+     * @param product the product to set
+     */
+    public void setProduct(String product) {
+        this.product = product;
     }
 
     /**

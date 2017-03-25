@@ -13,8 +13,11 @@
 		<section id="nav">
 			<nav>
 				<ul>
-					<li><a th:href="@{/kmcatalogentries}">Home</a></li>
+                    <li><a th:href="@{/kmcatalogentries}">Home</a></li>
                     <li><a th:href="@{/documentcategories}">Document Categories</a></li>
+                    <li><a th:href="@{/products}">Products</a></li>
+                    <li><a th:href="@{/departments}">Departments</a></li>
+                    <li><a th:href="@{/communities}">Communities</a></li>
 				</ul>
 			</nav>
 		</section>
@@ -67,6 +70,11 @@
 					<input type="radio" name="community" value="Mechanical_Engineers" /> Mechanical Engineers<br />
 					<input type="radio" name="community" value="System_Administration" /> System Administration<br />
 					<input type="radio" name="community" value="Developers" /> Developers<br />
+                    Product:<br />
+                    <input type="radio" name="product" value="none" checked="checked" /> n/a<br />
+                    <input type="radio" name="product" value="Product A" /> Product A<br />
+                    <input type="radio" name="product" value="Product B" /> Product B<br />
+                    <input type="radio" name="product" value="Product C" /> Product C<br />
 					Filename: <input type="text" name="documentFilename" /><br />
 					<input class="button" type="submit" value="Add Catalog Entry"/>
 				</form> 

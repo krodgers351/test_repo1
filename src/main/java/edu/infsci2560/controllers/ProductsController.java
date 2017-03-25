@@ -5,8 +5,8 @@
  */
 package edu.infsci2560.controllers;
 
-import edu.infsci2560.models.Community;
-import edu.infsci2560.repositories.CommunityRepository;
+import edu.infsci2560.models.Product;
+import edu.infsci2560.repositories.ProductRepository;
 import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
@@ -25,19 +25,19 @@ import org.springframework.web.servlet.ModelAndView;
  * @author KRodgers
  */
 @Controller
-public class CommunitiesController {    
+public class ProductsController {    
 	@Autowired
-    private CommunityRepository repository;
+    private ProductRepository repository;
     
-    @RequestMapping(value = "communities", method = RequestMethod.GET)
+    @RequestMapping(value = "products", method = RequestMethod.GET)
     public ModelAndView index() {        
-        return new ModelAndView("communities", "communities", repository.findAll());
+        return new ModelAndView("products", "products", repository.findAll());
     }
     
-    @RequestMapping(value = "documentcategories/add", method = RequestMethod.POST, consumes="application/x-www-form-urlencoded", produces = "application/json")
-    public ModelAndView create(@ModelAttribute @Valid Community community, BindingResult result) {
-        repository.save(community);
-        return new ModelAndView("communities", "communities", repository.findAll());
+    @RequestMapping(value = "products/add", method = RequestMethod.POST, consumes="application/x-www-form-urlencoded", produces = "application/json")
+    public ModelAndView create(@ModelAttribute @Valid Product product, BindingResult result) {
+        repository.save(product);
+        return new ModelAndView("products", "products", repository.findAll());
     }
 
 }

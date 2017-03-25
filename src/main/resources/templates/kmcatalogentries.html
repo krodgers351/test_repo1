@@ -16,10 +16,11 @@
             /*]]>*/
         });
 
-        /*$('document').ready(function () {
-            url = '/public/api/documentcategories';
-            getDataFromWebService(url);
-        });*/
+        function creatDocOptions(data) {
+            for (var field in data) {
+                $('<option value="' + data[field].categoryName + '">' + data[field].categoryName + '</option>').appendTo('#doc_cat_selection');
+            }
+        }
 
         function getDataFromWebService(targetUrl) {
             $.ajax({
@@ -29,6 +30,7 @@
                 dataType: "json",
                 success: function (data, status, jqXHR) { //on successful ajax call
                     console.log(data);
+                    creatDocOptions(data)
                 },
                 error: function (jqXHR, status) { //if not successful
                     console.log(status); //log error to javascript console
@@ -36,10 +38,6 @@
             });
         }
 
-        /*<![CDATA[*/
-        var x = 5 + 5;
-        console.log("hello");
-        /*]]>*/
     </script>
 
     </head>
@@ -90,7 +88,7 @@
 					Title: <input type="text" name="documentTitle" /><br />
 					Knowledge Owner: <input type="text" name="knowledgeOwner" /><br />
 					Audience: <input type="text" name="audience" /><br />
-					Document Category:<br />
+					<!--Document Category:<br />
 					<input type="radio" name="documentCategory" value="Unknown" checked="checked" /> Unknown<br />
 					<input type="radio" name="documentCategory" value="Best_Practice" /> Best Practice<br />
 					<input type="radio" name="documentCategory" value="Design" /> Design<br />
@@ -101,7 +99,11 @@
 					<input type="radio" name="documentCategory" value="Standard" /> Standard<br />
 					<input type="radio" name="documentCategory" value="Template" /> Template<br />
 					<input type="radio" name="documentCategory" value="Training" /> Training<br />
-					<input type="radio" name="documentCategory" value="User_Documentation" /> User Documentation<br />	
+					<input type="radio" name="documentCategory" value="User_Documentation" /> User Documentation<br />-->
+                    Document Category:<br />
+                    <select id="doc_cat_selection" name="doc_select">
+
+                    </select>
 					Community:<br />
 					<input type="radio" name="community" value="Everyone" checked="checked" /> Everyone<br />
 					<input type="radio" name="community" value="Chemical_Engineers" /> Chemical Engineers<br />

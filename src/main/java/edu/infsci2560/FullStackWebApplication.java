@@ -2,8 +2,6 @@ package edu.infsci2560;
 
 import edu.infsci2560.models.KMCatalogEntry;
 import edu.infsci2560.models.DocumentCategory;
-//import edu.infsci2560.models.KMCatalogEntry.DocumentCategory;
-import edu.infsci2560.models.KMCatalogEntry.Community;
 import edu.infsci2560.repositories.KMCatalogEntryRepository;
 import edu.infsci2560.repositories.DocumentCategoryRepository;
 

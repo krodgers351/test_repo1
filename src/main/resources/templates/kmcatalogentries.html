@@ -11,9 +11,9 @@
     <script th:inline="javascript" type="text/javascript">
         $("document").ready(function (e) {
             /*<![CDATA[*/
-            getDataFromWebService(/*[[@{/public/api/documentcategories}]]*/, doc);
-            getDataFromWebService(/*[[@{/public/api/communities}]]*/, community);
-            getDataFromWebService(/*[[@{/public/api/products}]]*/, product);
+            getDataFromWebService(/*[[@{/public/api/documentcategories}]]*/, "doc");
+            getDataFromWebService(/*[[@{/public/api/communities}]]*/, "community");
+            getDataFromWebService(/*[[@{/public/api/products}]]*/, "product");
             /*]]>*/
         });
 
@@ -42,13 +42,13 @@
                 contentType: "application/json; charset=utf-8",
                 dataType: "json",
                 success: function (data, status, jqXHR) { //on successful ajax call
-                    if (targetDOM == doc) {
+                    if (targetDOM == "doc") {
                         creatDocOptions(data);
                     }
-                    if (targetDOM == community) {
+                    if (targetDOM == "community") {
                         creatCommunityOptions(data);
                     }
-                    if (targetDOM == product) {
+                    if (targetDOM == "product") {
                         creatProductOptions(data);
                     }
                 },

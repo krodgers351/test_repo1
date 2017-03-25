@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>KM Catalog Home</title>
+		<meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link rel="stylesheet" type="text/css" th:href="@{/css/styles.css}" href="../../css/styles.css"/>
+    </head>
+    <body>
+		<header>
+			<h1 data-th-inline="text"><img th:src="@{/images/logo.jpg}" alt=""/>Knowledge Management System</h1>
+		</header>
+		<section id="nav">
+			<nav>
+				<ul>
+					<li><a th:href="@{/kmcatalogentries}">Home</a></li>
+				</ul>
+			</nav>
+		</section>
+		<section class="content">
+			<div>
+				<table id="catalog">
+					<tr>
+						<th>ID</th>
+						<th>Title</th>
+						<th>Owner</th>
+						<th>Audience</th>
+						<th>Category</th>
+						<th>Community</th>
+						<th>Filename</th>
+					</tr>                
+					<tr data-th-each="entry : ${kmcatalogentries}">
+						<td data-th-text="${entry.id}"></td>
+						<td data-th-text="${entry.documentTitle}"></td>
+						<td data-th-text="${entry.knowledgeOwner}"></td>
+						<td data-th-text="${entry.audience}"></td>
+						<td data-th-text="${entry.documentCategory}"></td>
+						<td data-th-text="${entry.community}"></td>
+						<td data-th-text="${entry.documentFilename}"></td>
+					</tr>
+				</table>
+			</div>
+			<hr />
+			<div id="addEntry">
+				<h2>Add Entry to KM Catalog</h2>
+				<form data-th-action="@{/kmcatalogentries/add}" name="addKMCatalogEntryForm" method="post">
+					Title: <input type="text" name="documentTitle" /><br />
+					Knowledge Owner: <input type="text" name="knowledgeOwner" /><br />
+					Audience: <input type="text" name="audience" /><br />
+					Document Category:<br />
+					<input type="radio" name="documentCategory" value="Unknown" checked="checked" /> Unknown<br />
+					<input type="radio" name="documentCategory" value="Best_Practice" /> Best Practice<br />
+					<input type="radio" name="documentCategory" value="Design" /> Design<br />
+					<input type="radio" name="documentCategory" value="Lessons_Learned" /> Lessons Learned<br />
+					<input type="radio" name="documentCategory" value="Procedure" /> Procedure<br />
+					<input type="radio" name="documentCategory" value="Reference" /> Reference<br />
+					<input type="radio" name="documentCategory" value="Requirements" /> Requirements<br />
+					<input type="radio" name="documentCategory" value="Standard" /> Standard<br />
+					<input type="radio" name="documentCategory" value="Template" /> Template<br />
+					<input type="radio" name="documentCategory" value="Training" /> Training<br />
+					<input type="radio" name="documentCategory" value="User_Documentation" /> User Documentation<br />	
+					Community:<br />
+					<input type="radio" name="community" value="Everyone" checked="checked" /> Everyone<br />
+					<input type="radio" name="community" value="Chemical_Engineers" /> Chemical Engineers<br />
+					<input type="radio" name="community" value="Electrical_Engineers" /> Electrical Engineers<br />
+					<input type="radio" name="community" value="Mechanical_Engineers" /> Mechanical Engineers<br />
+					<input type="radio" name="community" value="System_Administration" /> System Administration<br />
+					<input type="radio" name="community" value="Developers" /> Developers<br />
+					Filename: <input type="text" name="documentFilename" /><br />
+					<input class="button" type="submit" value="Add Catalog Entry"/>
+				</form> 
+			</div>
+			<hr />
+			<div id="submitEntry">
+				<form data-th-action="@{/logout}" method="post">
+						<input class="button" type="submit" value="Sign Out"/>
+				</form>
+			</div>
+        </section>     
+    </body>
+</html>

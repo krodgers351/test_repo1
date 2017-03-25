@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login</title>
+		<meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link rel="stylesheet" type="text/css" th:href="@{/css/login.css}" href="../../css/login.css"/>
+    </head>
+    <body> 
+		<header>
+            <h1>iKnowledge</h1> 
+        </header>	
+		<div id="login">
+			<div data-th-if="${param.error}">
+			Invalid username and password.
+			</div>
+			<div data-th-if="${param.logout}">
+				You have been logged out.
+			</div>
+			<form data-th-action="@{/login}" method="post">
+				<div><label>Sign in to your Account</label></div>
+				<div><img th:src="@{/images/login.jpg}" alt="login man with key and lock" /></div>
+				<div><label> <input type="text" name="username" placeholder="User Name"/> </label></div>
+				<div><label> <input type="password" name="password" placeholder="Password"/> </label></div>
+				<div><input class="button" type="submit" value="Sign In"/></div>
+			</form>
+		</div>
+    </body>
+</html>

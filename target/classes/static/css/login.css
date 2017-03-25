@@ -1,0 +1,81 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/*html {
+    height: 100%;
+    background-color: #3a5061;
+    visibility:hidden;
+}*/
+
+body {
+    margin:0px auto;
+    width: 80%;
+    background-color: white;
+    min-height: 100%;
+}
+
+h1 {
+    padding-top: 3%;
+    padding-bottom: 3%;
+    text-align: center;
+    font-size: 3.5em;
+}
+
+#login {
+    margin: auto;
+    text-align: center;
+    width: 50%;
+    border-color: #a7b1c4;
+    border-width:6px;	
+    border-style:inset;
+    -moz-box-shadow: 5px 5px 5px rgba(0,0,0, 1); 
+    -webkit-box-shadow: 5px 5px 5px rgba(0,0,0, 1);
+    box-shadow: 5px 5px 5px rgba(100,0,0, 1);
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+}
+
+div {
+	margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+#tblLogin th {
+    height: 50px;
+    font-size: 1.5em;
+}
+
+#tblLogin td {
+    height: 40px;
+}
+
+.button{
+    border : solid 3px #2b2b2b;
+    border-radius : 13px 3px 13px 3px ;
+    moz-border-radius : 13px 3px 13px 3px ;
+    -webkit-box-shadow : inset 0px 0px 5px rgba(0,0,0,1.0);
+    -moz-box-shadow : inset 0px 0px 5px rgba(0,0,0,1.0);
+    box-shadow : inset 0px 0px 5px rgba(0,0,0,1.0);
+    font-size : 18px;
+    color : white;
+    letter-spacing: 1px;
+    padding : 3px 10px;
+    background : #a7b1c4;
+    background : -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a7b1c4), color-stop(100%,#3a5061));
+    background : -moz-linear-gradient(top, #a7b1c4 0%, #3a5061 100%);
+    background : -webkit-linear-gradient(top, #a7b1c4 0%, #3a5061 100%);
+    background : -o-linear-gradient(top, #a7b1c4 0%, #3a5061 100%);
+    background : -ms-linear-gradient(top, #a7b1c4 0%, #3a5061 100%);
+    background : linear-gradient(top, #a7b1c4 0%, #3a5061 100%);
+    filter : progid:DXImageTransform.Microsoft.gradient( startColorstr='#a7b1c4', endColorstr='#3a5061',GradientType=0 );
+    margin: 10px 0;
+}
+
+.lblHidden {
+    position: absolute; 
+    left: -999em;
+}

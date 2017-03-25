@@ -1,0 +1,7 @@
+edu\infsci2560\PageHtmlValidator.class
+edu\infsci2560\LoginIT.class
+edu\infsci2560\controllers\ApiControllerTest.class
+edu\infsci2560\AboutIT.class
+edu\infsci2560\LoginHelper.class
+edu\infsci2560\repositories\CustomerRepositoryTest.class
+edu\infsci2560\controllers\ApiControllerIT.class

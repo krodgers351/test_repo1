@@ -21,19 +21,19 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 public class KMCatalogEntry {
     private static final long serialVersionUID = 1L;
     
-    public enum DocumentCategory {
-        Unknown,
-        Best_Practice,
-        Design,
-        Lessons_Learned,
-        Procedure,
-        Reference,
-        Requirements,
-        Standard,
-        Template,
-        Training,
-        User_Documentation               
-    }
+    //public enum DocumentCategory {
+    //    Unknown,
+    //    Best_Practice,
+    //    Design,
+    //    Lessons_Learned,
+    //    Procedure,
+    //    Reference,
+    //    Requirements,
+    //    Standard,
+    //    Template,
+    //    Training,
+    //    User_Documentation               
+    //}
     
     public enum Community {
         Everyone,
@@ -50,7 +50,8 @@ public class KMCatalogEntry {
     protected String documentTitle;
     protected String knowledgeOwner;
     protected String audience;
-    protected DocumentCategory documentCategory;
+    //protected DocumentCategory documentCategory;
+	protected String documentCategory;
     protected Community community;
     protected String documentFilename;
     
@@ -59,12 +60,13 @@ public class KMCatalogEntry {
         this.documentTitle = null;
         this.knowledgeOwner = null;
         this.audience = null;
-        this.documentCategory = DocumentCategory.Unknown;
+		this.documentCategory = null;
+        //this.documentCategory = DocumentCategory.Unknown;
         this.community = Community.Everyone;
         this.documentFilename = null;
     }
     
-    public KMCatalogEntry(Long id, String title, String owner, String audience, DocumentCategory category, Community community, String filename){
+    public KMCatalogEntry(Long id, String title, String owner, String audience, String category, Community community, String filename){
         this.id = id;
         this.documentTitle = title;
         this.knowledgeOwner = owner;
@@ -149,14 +151,14 @@ public class KMCatalogEntry {
     /**
      * @return the documentCategory
      */
-    public DocumentCategory getDocumentCategory() {
+    public String getDocumentCategory() {
         return documentCategory;
     }
 
     /**
-     * @param documentCategory the documentCategory to set
+     * @param String the documentCategory to set
      */
-    public void setDocumentCategory(DocumentCategory documentCategory) {
+    public void setDocumentCategory(String documentCategory) {
         this.documentCategory = documentCategory;
     }
 

@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Document Categories</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/styles.css}" href="../../css/styles.css" />
+</head>
+<body>
+    <header>
+        <h1 data-th-inline="text"><img th:src="@{/images/logo.jpg}" alt="" />Knowledge Management System</h1>
+    </header>
+    <section id="nav">
+        <nav>
+            <ul>
+                <!--<li><a th:href="@{/kmcatalogentries}">Home</a></li>
+                <li><a th:href="@{/documentcategories}">Document Categories</a></li>-->
+            </ul>
+        </nav>
+    </section>
+    <section class="content">
+        <div>
+            <table id="catalog">
+                <tr>
+                    <th>ID</th>
+                    <th>Category</th>
+                </tr>
+                <!--<tr data-th-each="entry : ${documentcategories}">
+                    <td data-th-text="${entry.id}"></td>
+                    <td data-th-text="${entry.categoryName}"></td>
+                </tr>-->
+            </table>
+        </div>
+        <hr />
+        <div id="addEntry">
+            <h2>Add a New Document Category</h2>
+            <form data-th-action="@{/documentcategories/add}" name="addDocumentCategoryForm" method="post">
+                Category: <input type="text" name="documentCategory" /><br />
+                <input class="button" type="submit" value="Add Category" />
+            </form>
+        </div>
+        <hr />
+        <div id="submitEntry">
+            <form data-th-action="@{/logout}" method="post">
+                <input class="button" type="submit" value="Sign Out" />
+            </form>
+        </div>
+    </section>
+</body>
+</html>

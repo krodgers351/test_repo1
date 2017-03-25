@@ -61,9 +61,9 @@ public class FullStackWebApplication {
 		dpRepo.save(j = new DocumentCategory(3L, "Engineering"));
 
 		KMCatalogEntryRepository kmRepo = ctx.getBean(KMCatalogEntryRepository.class);
-		kmRepo.save(new KMCatalogEntry(1L, "C# Coding Standards", "John Doe", "UnitA", x.getCategoryName(), a.community, m.productName, "csharpstandard.pdf"));
-        kmRepo.save(new KMCatalogEntry(2L, "Contaminated Sample Procedure", "Jane Smith", "UnitC", y.getCategoryName(), b.community, n.productName, "contaminated_sample_procedure.pdf"));
-        kmRepo.save(new KMCatalogEntry(3L, "Communications Wiring Diagram for Product X", "Jimmy Jones", "UnitB", z.getCategoryName(), c.community, o.productName, "x_comms_wiring_diagram.pdf"));
+		kmRepo.save(new KMCatalogEntry(1L, "C# Coding Standards", "John Doe", "UnitA", x.getCategoryName(), a.getCommunity(), m.getProductName(), "csharpstandard.pdf"));
+        kmRepo.save(new KMCatalogEntry(2L, "Contaminated Sample Procedure", "Jane Smith", "UnitC", y.getCategoryName(), b.getCommunity(), n.getProductName(), "contaminated_sample_procedure.pdf"));
+        kmRepo.save(new KMCatalogEntry(3L, "Communications Wiring Diagram for Product X", "Jimmy Jones", "UnitB", z.getCategoryName(), c.getCommunity(), o.getProductName(), "x_comms_wiring_diagram.pdf"));
 		
 	}
 

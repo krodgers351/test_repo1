@@ -19,30 +19,16 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Entity
 public class KMCatalogEntry {
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;  
     
-    //public enum DocumentCategory {
-    //    Unknown,
-    //    Best_Practice,
-    //    Design,
-    //    Lessons_Learned,
-    //    Procedure,
-    //    Reference,
-    //    Requirements,
-    //    Standard,
-    //    Template,
-    //    Training,
-    //    User_Documentation               
-    //}
-    
-    public enum Community {
+    /*public enum Community {
         Everyone,
         Chemical_Engineers,
         Electrical_Engineers,
         Mechanical_Engineers,
         System_Administration,
         Developers
-    }
+    }*/
     
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -50,9 +36,8 @@ public class KMCatalogEntry {
     protected String documentTitle;
     protected String knowledgeOwner;
     protected String audience;
-    //protected DocumentCategory documentCategory;
 	protected String documentCategory;
-    protected Community community;
+    protected String community;
     protected String documentFilename;
     
     public KMCatalogEntry(){
@@ -61,12 +46,11 @@ public class KMCatalogEntry {
         this.knowledgeOwner = null;
         this.audience = null;
 		this.documentCategory = null;
-        //this.documentCategory = DocumentCategory.Unknown;
-        this.community = Community.Everyone;
+        this.community = null;
         this.documentFilename = null;
     }
     
-    public KMCatalogEntry(Long id, String title, String owner, String audience, String category, Community community, String filename){
+    public KMCatalogEntry(Long id, String title, String owner, String audience, String category, String community, String filename){
         this.id = id;
         this.documentTitle = title;
         this.knowledgeOwner = owner;
@@ -165,14 +149,14 @@ public class KMCatalogEntry {
     /**
      * @return the community
      */
-    public Community getCommunity() {
+    public String getCommunity() {
         return community;
     }
 
     /**
      * @param community the community to set
      */
-    public void setCommunity(Community community) {
+    public void setCommunity(String community) {
         this.community = community;
     }
 

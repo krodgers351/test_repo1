@@ -12,6 +12,7 @@
         $("document").ready(function (e) {
             /*<![CDATA[*/
             var data = getDataFromWebService(/*[[@{/public/api/documentcategories}]]*/);
+            console.log(data);
             creatDocOptions(data);
             creatCommunityOptions(getDataFromWebService(/*[[@{/public/api/communities}]]*/));
             creatProductOptions(getDataFromWebService(/*[[@{/public/api/products}]]*/));
@@ -43,6 +44,7 @@
                 contentType: "application/json; charset=utf-8",
                 dataType: "json",
                 success: function (data, status, jqXHR) { //on successful ajax call
+                    console.log(data);
                     return data;
                 },
                 error: function (jqXHR, status) { //if not successful

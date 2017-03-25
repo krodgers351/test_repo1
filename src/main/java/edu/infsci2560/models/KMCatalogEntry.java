@@ -20,16 +20,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 @Entity
 public class KMCatalogEntry {
     private static final long serialVersionUID = 1L;  
-    
-    /*public enum Community {
-        Everyone,
-        Chemical_Engineers,
-        Electrical_Engineers,
-        Mechanical_Engineers,
-        System_Administration,
-        Developers
-    }*/
-    
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     protected Long id;

@@ -34,7 +34,7 @@ public class CommunitiesController {
         return new ModelAndView("communities", "communities", repository.findAll());
     }
     
-    @RequestMapping(value = "documentcategories/add", method = RequestMethod.POST, consumes="application/x-www-form-urlencoded", produces = "application/json")
+    @RequestMapping(value = "communities/add", method = RequestMethod.POST, consumes="application/x-www-form-urlencoded", produces = "application/json")
     public ModelAndView create(@ModelAttribute @Valid Community community, BindingResult result) {
         repository.save(community);
         return new ModelAndView("communities", "communities", repository.findAll());

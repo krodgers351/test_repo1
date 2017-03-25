@@ -6,7 +6,6 @@
 package edu.infsci2560.services;
 
 import edu.infsci2560.models.KMCatalogEntry;
-import edu.infsci2560.models.DocumentCategory;
 import edu.infsci2560.repositories.KMCatalogEntryRepository;
 import java.util.ArrayList;
 import java.util.HashMap;

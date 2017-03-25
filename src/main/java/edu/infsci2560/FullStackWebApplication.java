@@ -2,8 +2,14 @@ package edu.infsci2560;
 
 import edu.infsci2560.models.KMCatalogEntry;
 import edu.infsci2560.models.DocumentCategory;
+import edu.infsci2560.models.Community;
+import edu.infsci2560.models.Product;
+import edu.infsci2560.models.Department;
 import edu.infsci2560.repositories.KMCatalogEntryRepository;
 import edu.infsci2560.repositories.DocumentCategoryRepository;
+import edu.infsci2560.repositories.CommunityRepository;
+import edu.infsci2560.repositories.ProductRepository;
+import edu.infsci2560.repositories.DepartmentRepository;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -21,25 +27,25 @@ public class FullStackWebApplication {
 
     public static void main(String[] args) {
 		ApplicationContext ctx = SpringApplication.run(FullStackWebApplication.class, args);
-		
+		DocumentCategory x;
+		DocumentCategory y;
+		DocumentCategory z;
+		Community a;
+		Community b;
+		Product m;
+		Product n;
+		Product o;
+
+		DocumentCategoryRepository dcRepo = ctx.getBean(DocumentCategoryRepository.class);
+		dcRepo.save(x = new DocumentCategory(1L, "Best Practice"));
+		dcRepo.save(y = new DocumentCategory(2L, "Standard"););
+		dcRepo.save(z = new DocumentCategory(3L, "Requirements"));
+
 		KMCatalogEntryRepository repository = ctx.getBean(KMCatalogEntryRepository.class);
-        //repository.save(new KMCatalogEntry(1L, "C# Coding Standards", "John Doe", "UnitA", DocumentCategory.Standard, Community.Developers, "csharpstandard.pdf"));
-        //repository.save(new KMCatalogEntry(2L, "Contaminated Sample Procedure", "Jane Smith", "UnitC", DocumentCategory.Procedure, Community.Chemical_Engineers, "contaminated_sample_procedure.pdf"));
-        //repository.save(new KMCatalogEntry(3L, "Communications Wiring Diagram for Product X", "Jimmy Jones", "UnitB", DocumentCategory.Design, Community.Electrical_Engineers, "x_comms_wiring_diagram.pdf"));
-		DocumentCategory x = new DocumentCategory(1L, "Best Practice");
-		DocumentCategory y = new DocumentCategory(2L, "Standard");
-		DocumentCategory z = new DocumentCategory(3L, "Requirements");
 		repository.save(new KMCatalogEntry(1L, "C# Coding Standards", "John Doe", "UnitA", x.getCategoryName(), "Developers", "Product A", "csharpstandard.pdf"));
         repository.save(new KMCatalogEntry(2L, "Contaminated Sample Procedure", "Jane Smith", "UnitC", y.getCategoryName(), "Chemical_Engineers", "Product B", "contaminated_sample_procedure.pdf"));
         repository.save(new KMCatalogEntry(3L, "Communications Wiring Diagram for Product X", "Jimmy Jones", "UnitB", z.getCategoryName(), "Electrical_Engineers","Product A", "x_comms_wiring_diagram.pdf"));
-
-		DocumentCategoryRepository dcRepo = ctx.getBean(DocumentCategoryRepository.class);
-		//dcRepo.save(new DocumentCategory(1L, "Best Practice"));
-		//dcRepo.save(new DocumentCategory(2L, "Standard"));
-		//dcRepo.save(new DocumentCategory(3L, "Requirements"));
-		dcRepo.save(x);
-		dcRepo.save(y);
-		dcRepo.save(z);
+		
 	}
 
 //    @Bean

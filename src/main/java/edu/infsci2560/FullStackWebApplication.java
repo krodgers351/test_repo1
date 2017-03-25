@@ -46,19 +46,19 @@ public class FullStackWebApplication {
 		dcRepo.save(z = new DocumentCategory(3L, "Requirements"));
 
 		CommunityRepository cmRepo = ctx.getBean(CommunityRepository.class);
-		cmRepo.save(a = new DocumentCategory(1L, "Developers"));
-		cmRepo.save(b = new DocumentCategory(2L, "Mechanical Engineers"));
-		cmRepo.save(c = new DocumentCategory(3L, "Electrical Engineers"));
+		cmRepo.save(a = new Community(1L, "Developers"));
+		cmRepo.save(b = new Community(2L, "Mechanical Engineers"));
+		cmRepo.save(c = new Community(3L, "Electrical Engineers"));
 
 		ProductRepository pdRepo = ctx.getBean(ProductRepository.class);
-		pdRepo.save(m = new DocumentCategory(1L, "Product A"));
-		pdRepo.save(n = new DocumentCategory(2L, "Product B"));
-		pdRepo.save(o = new DocumentCategory(3L, "Product C"));
+		pdRepo.save(m = new Product(1L, "Product A"));
+		pdRepo.save(n = new Product(2L, "Product B"));
+		pdRepo.save(o = new Product(3L, "Product C"));
 
 		DepartmentRepository dpRepo = ctx.getBean(DepartmentRepository.class);
-		dpRepo.save(h = new DocumentCategory(1L, "Finance"));
-		dpRepo.save(i = new DocumentCategory(2L, "IT"));
-		dpRepo.save(j = new DocumentCategory(3L, "Engineering"));
+		dpRepo.save(h = new Department(1L, "Finance"));
+		dpRepo.save(i = new Department(2L, "IT"));
+		dpRepo.save(j = new Department(3L, "Engineering"));
 
 		KMCatalogEntryRepository kmRepo = ctx.getBean(KMCatalogEntryRepository.class);
 		kmRepo.save(new KMCatalogEntry(1L, "C# Coding Standards", "John Doe", "UnitA", x.getCategoryName(), a.getCommunity(), m.getProductName(), "csharpstandard.pdf"));

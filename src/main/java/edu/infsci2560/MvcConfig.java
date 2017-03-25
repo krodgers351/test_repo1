@@ -19,4 +19,11 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
         registry.addViewController("/login").setViewName("login");
     }
 
+	@Bean 
+    public ServletContextTemplateResolver templateResolver() { 
+        ServletContextTemplateResolver templateResolver = new ServletContextTemplateResolver(); 
+        templateResolver.setTemplateMode("HTML5"); 
+        templateResolver.setOrder(2); 
+        return templateResolver; 
+    }
 }

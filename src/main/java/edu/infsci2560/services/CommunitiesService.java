@@ -31,7 +31,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class CommunitiesService {
 
     @Autowired
-    private DocumentCategoryRepository repository;
+    private CommunityRepository repository;
 
     @RequestMapping(method = RequestMethod.GET, produces = "application/json")
     public ResponseEntity<Iterable<Community>> list() {

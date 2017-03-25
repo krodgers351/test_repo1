@@ -59,7 +59,7 @@ public class KMCatalogEntry {
         this.audience = audience;
         this.documentCategory = category;
         this.community = community;
-		this.product = product
+		this.product = product;
         this.documentFilename = filename;
     }
     

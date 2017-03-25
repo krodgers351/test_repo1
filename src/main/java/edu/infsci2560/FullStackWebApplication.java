@@ -38,7 +38,7 @@ public class FullStackWebApplication {
 
 		DocumentCategoryRepository dcRepo = ctx.getBean(DocumentCategoryRepository.class);
 		dcRepo.save(x = new DocumentCategory(1L, "Best Practice"));
-		dcRepo.save(y = new DocumentCategory(2L, "Standard"););
+		dcRepo.save(y = new DocumentCategory(2L, "Standard"));
 		dcRepo.save(z = new DocumentCategory(3L, "Requirements"));
 
 		KMCatalogEntryRepository repository = ctx.getBean(KMCatalogEntryRepository.class);

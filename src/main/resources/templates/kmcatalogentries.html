@@ -11,14 +11,27 @@
     <script th:inline="javascript" type="text/javascript">
         $("document").ready(function (e) {
             /*<![CDATA[*/
-            url = /*[[@{/public/api/documentcategories}]]*/ "";
-            getDataFromWebService(url);
+            creatDocOptions(getDataFromWebService(/*[[@{/public/api/documentcategories}]]*/));
+            creatCommunityOptions(getDataFromWebService(/*[[@{/public/api/communities}]]*/));
+            creatProductOptions(getDataFromWebService(/*[[@{/public/api/products}]]*/));
             /*]]>*/
         });
 
         function creatDocOptions(data) {
             for (var field in data) {
                 $('<option value="' + data[field].categoryName + '">' + data[field].categoryName + '</option>').appendTo('#doc_cat_selection');
+            }
+        }
+
+        function creatCommunityOptions(data) {
+            for (var field in data) {
+                $('<option value="' + data[field].community + '">' + data[field].community + '</option>').appendTo('#community_selection');
+            }
+        }
+
+        function creatProductOptions(data) {
+            for (var field in data) {
+                $('<option value="' + data[field].productName + '">' + data[field].productName + '</option>').appendTo('#product_selection');
             }
         }
 
@@ -29,8 +42,7 @@
                 contentType: "application/json; charset=utf-8",
                 dataType: "json",
                 success: function (data, status, jqXHR) { //on successful ajax call
-                    console.log(data);
-                    creatDocOptions(data)
+                    return data;
                 },
                 error: function (jqXHR, status) { //if not successful
                     console.log(status); //log error to javascript console
@@ -88,34 +100,12 @@
 					Title: <input type="text" name="documentTitle" /><br />
 					Knowledge Owner: <input type="text" name="knowledgeOwner" /><br />
 					Audience: <input type="text" name="audience" /><br />
-					<!--Document Category:<br />
-					<input type="radio" name="documentCategory" value="Unknown" checked="checked" /> Unknown<br />
-					<input type="radio" name="documentCategory" value="Best_Practice" /> Best Practice<br />
-					<input type="radio" name="documentCategory" value="Design" /> Design<br />
-					<input type="radio" name="documentCategory" value="Lessons_Learned" /> Lessons Learned<br />
-					<input type="radio" name="documentCategory" value="Procedure" /> Procedure<br />
-					<input type="radio" name="documentCategory" value="Reference" /> Reference<br />
-					<input type="radio" name="documentCategory" value="Requirements" /> Requirements<br />
-					<input type="radio" name="documentCategory" value="Standard" /> Standard<br />
-					<input type="radio" name="documentCategory" value="Template" /> Template<br />
-					<input type="radio" name="documentCategory" value="Training" /> Training<br />
-					<input type="radio" name="documentCategory" value="User_Documentation" /> User Documentation<br />-->
-                    Document Category:<br />
-                    <select id="doc_cat_selection" name="doc_select">
-
-                    </select>
-					Community:<br />
-					<input type="radio" name="community" value="Everyone" checked="checked" /> Everyone<br />
-					<input type="radio" name="community" value="Chemical_Engineers" /> Chemical Engineers<br />
-					<input type="radio" name="community" value="Electrical_Engineers" /> Electrical Engineers<br />
-					<input type="radio" name="community" value="Mechanical_Engineers" /> Mechanical Engineers<br />
-					<input type="radio" name="community" value="System_Administration" /> System Administration<br />
-					<input type="radio" name="community" value="Developers" /> Developers<br />
-                    Product:<br />
-                    <input type="radio" name="product" value="none" checked="checked" /> n/a<br />
-                    <input type="radio" name="product" value="Product A" /> Product A<br />
-                    <input type="radio" name="product" value="Product B" /> Product B<br />
-                    <input type="radio" name="product" value="Product C" /> Product C<br />
+                    Document Category:
+                    <select id="doc_cat_selection" name="doc_select"></select><br />
+					Community:
+                    <select id="community_selection" name="community_select"></select><br />
+                    Product:
+                    <select id="product_selection" name="product_select"></select><br />
 					Filename: <input type="text" name="documentFilename" /><br />
 					<input class="button" type="submit" value="Add Catalog Entry"/>
 				</form> 

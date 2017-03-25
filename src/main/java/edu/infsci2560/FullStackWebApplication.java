@@ -32,19 +32,38 @@ public class FullStackWebApplication {
 		DocumentCategory z;
 		Community a;
 		Community b;
+		Community c;
 		Product m;
 		Product n;
 		Product o;
+		Department h;
+		Department i;
+		Department j;
 
 		DocumentCategoryRepository dcRepo = ctx.getBean(DocumentCategoryRepository.class);
 		dcRepo.save(x = new DocumentCategory(1L, "Best Practice"));
 		dcRepo.save(y = new DocumentCategory(2L, "Standard"));
 		dcRepo.save(z = new DocumentCategory(3L, "Requirements"));
 
-		KMCatalogEntryRepository repository = ctx.getBean(KMCatalogEntryRepository.class);
-		repository.save(new KMCatalogEntry(1L, "C# Coding Standards", "John Doe", "UnitA", x.getCategoryName(), "Developers", "Product A", "csharpstandard.pdf"));
-        repository.save(new KMCatalogEntry(2L, "Contaminated Sample Procedure", "Jane Smith", "UnitC", y.getCategoryName(), "Chemical_Engineers", "Product B", "contaminated_sample_procedure.pdf"));
-        repository.save(new KMCatalogEntry(3L, "Communications Wiring Diagram for Product X", "Jimmy Jones", "UnitB", z.getCategoryName(), "Electrical_Engineers","Product A", "x_comms_wiring_diagram.pdf"));
+		CommunityRepository cmRepo = ctx.getBean(CommunityRepository.class);
+		cmRepo.save(a = new DocumentCategory(1L, "Developers"));
+		cmRepo.save(b = new DocumentCategory(2L, "Mechanical Engineers"));
+		cmRepo.save(c = new DocumentCategory(3L, "Electrical Engineers"));
+
+		ProductRepository pdRepo = ctx.getBean(ProductRepository.class);
+		pdRepo.save(m = new DocumentCategory(1L, "Product A"));
+		pdRepo.save(n = new DocumentCategory(2L, "Product B"));
+		pdRepo.save(o = new DocumentCategory(3L, "Product C"));
+
+		DepartmentRepository dpRepo = ctx.getBean(DepartmentRepository.class);
+		dpRepo.save(h = new DocumentCategory(1L, "Finance"));
+		dpRepo.save(i = new DocumentCategory(2L, "IT"));
+		dpRepo.save(j = new DocumentCategory(3L, "Engineering"));
+
+		KMCatalogEntryRepository kmRepo = ctx.getBean(KMCatalogEntryRepository.class);
+		kmRepo.save(new KMCatalogEntry(1L, "C# Coding Standards", "John Doe", "UnitA", x.getCategoryName(), a.community, m.productName, "csharpstandard.pdf"));
+        kmRepo.save(new KMCatalogEntry(2L, "Contaminated Sample Procedure", "Jane Smith", "UnitC", y.getCategoryName(), b.community, n.productName, "contaminated_sample_procedure.pdf"));
+        kmRepo.save(new KMCatalogEntry(3L, "Communications Wiring Diagram for Product X", "Jimmy Jones", "UnitB", z.getCategoryName(), c.community, o.productName, "x_comms_wiring_diagram.pdf"));
 		
 	}
 

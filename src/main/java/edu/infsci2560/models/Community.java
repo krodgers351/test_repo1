@@ -68,14 +68,14 @@ public class Community {
 	/**
      * @return the community
      */
-    public String getCommunity() {
+    public String getCommunityName() {
         return communityName;
     }
 
     /**
      * @param community the community to set
      */
-    public void setCommunity(String communityName) {
+    public void setCommunityName(String communityName) {
         this.communityName = communityName;
     }
 }

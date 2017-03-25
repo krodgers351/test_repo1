@@ -28,7 +28,7 @@ public class Community {
 
 	public Community(){
 		this.id = Long.MAX_VALUE;
-		this.categoryName = null;
+		this.community = null;
 	}
 
 	public Community(Long id, String community){

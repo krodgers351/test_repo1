@@ -5,6 +5,43 @@
 		<meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<link rel="stylesheet" type="text/css" th:href="@{/css/styles.css}" href="../../css/styles.css"/>
+        <script th:src="@{/js/lib/jquery-3.1.1.min.js}" type="text/javascript"></script>
+
+    <script>
+        $('document').ready(function () {
+            url = '/public/api/documentcategories';
+            getDataFromWebService(url);
+        });
+
+        function getDataFromWebService(targetUrl) {
+            $.ajax({
+                type: "GET", //method type of GET
+                url: targetUrl, //url passed to function
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (data, status, jqXHR) { //on successful ajax call
+                    jsonToTable(data); //put JSON array data into table
+                },
+                error: function (jqXHR, status) { //if not successful
+                    console.log(status); //log error to javascript console
+                }
+            });
+        }
+
+        //function to organize returned JSON string data into a table
+        function jsonToTable(json) {
+            var $table = $('#tblJSONData'); //create table variable from DOM table object
+            $table.empty(); //clear the table
+            for (var i = 0; i < json.length; i++) { //iterate through JSON array
+                var $row = $('<tr />'); //create new table row
+                //append JSON properties to the row's cells
+                $row.append('<td>' + json[i].id + '</td>');
+                $row.append('<td>' + json[i].categoryName + '</td>');
+                $table.append($row); //append the row with values to the table
+            }
+        }
+    </script>
+
     </head>
     <body>
 		<header>
@@ -80,6 +117,7 @@
 					Filename: <input type="text" name="documentFilename" /><br />
 					<input class="button" type="submit" value="Add Catalog Entry"/>
 				</form> 
+                <table id="tblJSONData" border="1" cellpadding="2"></table>
 			</div>
 			<hr />
 			<div id="submitEntry">

@@ -11,7 +11,8 @@
     <script th:inline="javascript" type="text/javascript">
         $("document").ready(function (e) {
             /*<![CDATA[*/
-            creatDocOptions(getDataFromWebService(/*[[@{/public/api/documentcategories}]]*/));
+            var data = getDataFromWebService(/*[[@{/public/api/documentcategories}]]*/);
+            creatDocOptions(data);
             creatCommunityOptions(getDataFromWebService(/*[[@{/public/api/communities}]]*/));
             creatProductOptions(getDataFromWebService(/*[[@{/public/api/products}]]*/));
             /*]]>*/

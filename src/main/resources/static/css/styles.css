@@ -31,8 +31,7 @@ header{
 
 .content {
 	float:right;
-	width:80%;
-	margin-left:2%;
+	width:83%;
 	border-radius: 0px 50px 50px 50px;
 }
 
@@ -52,7 +51,7 @@ header{
 
 #nav {
 	float:left;
-	width:18%;
+	width:15%;
 	border-radius: 0px 50px 0px 0px;
 	background: -webkit-linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0.8), rgba(0,0,0,0.6), rgba(0,0,0,0)); 
 	background: -o-linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0.8), rgba(0,0,0,0.6), rgba(0,0,0,0)); 

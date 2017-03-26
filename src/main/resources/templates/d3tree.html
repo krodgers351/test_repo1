@@ -198,6 +198,7 @@
                     .attr("dy", ".37em")
                     .attr("text-anchor", function (d) { return d.children || d._children ? "end" : "start"; })
                     .text(function (d) { return d.name; })
+                    .style('fill', 'white')
                     .style("fill-opacity", 1e-6);
 
                 // Transition nodes to their new position.
@@ -230,8 +231,7 @@
 
                 // Update the links…
                 var link = svg.selectAll("path.link")
-                    .data(links, function (d) { return d.target.id; })
-                    .style('fill', 'white');
+                    .data(links, function (d) { return d.target.id; });
 
                 // Enter any new links at the parent's previous position.
                 link.enter().insert("path", "g")

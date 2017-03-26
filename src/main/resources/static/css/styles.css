@@ -196,6 +196,7 @@ a:active, nav a:active {
 .node text {
     font: 12px sans-serif;
     font-weight: bold;
+    color: white;
 }
 
 .link {

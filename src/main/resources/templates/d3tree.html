@@ -198,7 +198,7 @@
                     .attr("dy", ".37em")
                     .attr("text-anchor", function (d) { return d.children || d._children ? "end" : "start"; })
                     .text(function (d) { return d.name; })
-                    .style('fill', 'orange')
+                    .style('fill', 'darkOrange')
                     .style("fill-opacity", 1e-6);
 
                 // Transition nodes to their new position.
@@ -254,6 +254,10 @@
                         return diagonal({ source: o, target: o });
                     })
                     .remove();
+
+                d3.selectAll("path.link")
+                    .transition()
+                    .style("opacity", 0.5);
 
                 // Stash the old positions for transition.
                 nodes.forEach(function (d) {

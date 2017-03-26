@@ -40,16 +40,4 @@ public class DepartmentsController {
         return new ModelAndView("departments", "departments", repository.findAll());
     }
 
-	@RequestMapping(value="departments/{id}", method=RequestMethod.DELETE)
-    public ModelAndView delete(	@PathVariable Integer id) {
-    	repository.remove(id);
-        return new ModelAndView("departments", "departments", repository.findAll());
-    }
-
-	@RequestMapping(value = "departments/update", method = RequestMethod.PUT)  
-	public ModelAndView update(@ModelAttribute("entity") @Valid Entity entity) { 
-		repository.update(entity); 
-		return new ModelAndView("departments", "departments", repository.findAll());
-	} 
-
 }

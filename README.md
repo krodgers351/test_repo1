@@ -30,7 +30,14 @@ TODO : Please list key features of your project.
 
 * Users can add KM catalog entries to the repository
 * Users can use the KM catalog entries RESTful service to get the entries in JSON format
-* Key Feature N
+* Users can add document category entries to the repository
+* Users can use the document category entries RESTful service to get the entries in JSON format
+* Users can add community entries to the repository
+* Users can use the community entries RESTful service to get the entries in JSON format
+* Users can add department entries to the repository
+* Users can use department entries RESTful service to get the entries in JSON format
+* Users can add product entries to the repository
+* Users can use the product entries RESTful service to get the entries in JSON format
 
 ## Project Details
 

@@ -193,6 +193,7 @@
                     .attr("xlink:href", function (d) { return d.link; })
                     .attr("target", "_blank")
                     .append("text")
+                    .attr("color", "white")
                     .attr("class", "clickable")
                     .attr("x", function (d) { return d.children || d._children ? -10 : 10; })
                     .attr("dy", ".37em")

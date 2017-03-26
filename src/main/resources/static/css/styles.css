@@ -203,3 +203,29 @@ a:active, nav a:active {
     stroke: #ccc;
     stroke-width: 2px;
 }
+
+#tblListData {
+    border-radius: 1px 8px 8px 1px;
+}
+
+#tblListData, th {
+    padding: 4px;
+    border-collapse: collapse;
+    border: 1px solid black;
+    visibility: hidden;
+}
+
+#tblListData, td {
+    font-size: 12px;
+    padding: 3px;
+    border-collapse: collapse;
+    border-right: 1px solid black;
+}
+
+#btnToggleDocuments {
+    visibility: hidden;
+    background-color: lightsteelblue;
+    font: 12px sans-serif;
+    border-color: steelblue;
+    border-radius: 1px 8px 8px 1px;
+}

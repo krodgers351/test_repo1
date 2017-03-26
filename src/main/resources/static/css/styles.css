@@ -163,8 +163,7 @@ a:visited {
 
 a:hover{
 	color: #8FA0E6;
-	font-size: 110%;
-	letter-spacing: 1px;
+	font-size: 101%;
 }
 
 nav a:link {
@@ -180,7 +179,6 @@ nav a:hover {
 	color: #8FA0E6;
 	font-weight:bold;
 	font-size: 101%;
-	letter-spacing: 1px;
 }
 
 a:active, nav a:active {

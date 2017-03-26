@@ -16,7 +16,7 @@ html {
 
 body {
 	height: 100%;
-	width:90%;
+	width:95%;
 	margin:auto;
 	color: white;
 }
@@ -24,14 +24,14 @@ body {
 
 header{
 	background-color: rgba(0,0,0,0.9);
-	padding: 20px auto;
+	padding: 20px;
 	margin-bottom: 3%;
 	border-radius: 0px 75px 0px 10px;
 }
 
 .content {
 	float:right;
-	width:83%;
+	width:85%;
 	border-radius: 0px 50px 50px 50px;
 }
 
@@ -63,7 +63,7 @@ header{
 	display: block;
 	margin-top: 3%;
 	white-space: nowrap;
-	font-size:1.3em;	
+	font-size:1.2em;	
 }
 
 #nav ul{

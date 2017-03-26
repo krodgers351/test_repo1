@@ -7,7 +7,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 ### Added
 - TBD.
 
-## [v1.3] - 2017-03-25
+## [v1.4] - 2017-03-25
 ### Added
 - Document Category Entry entity
 - Document Category Entries repository
@@ -71,7 +71,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 - Configured developer workspace
 - Deployed to Heroku
 
-[Unreleased]: https://github.com/infsci2560sp17/full-stack-web-krodgers351/compare/v1.3...HEAD
+[Unreleased]: https://github.com/infsci2560sp17/full-stack-web-krodgers351/compare/v1.4...HEAD
+[v1.4]: https://github.com/infsci2560sp17/full-stack-web-krodgers351/compare/v1.3...v1.4
 [v1.3]: https://github.com/infsci2560sp17/full-stack-web-krodgers351/compare/v1.2...v1.3
 [v1.2]: https://github.com/infsci2560sp17/full-stack-web-krodgers351/compare/v1.1...v1.2
 [v1.1]: https://github.com/infsci2560sp17/full-stack-web-krodgers351/compare/...v1.1

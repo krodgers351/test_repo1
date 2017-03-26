@@ -22,7 +22,7 @@
                 contentType: "application/json; charset=utf-8",
                 dataType: "json",
                 success: function (data, status, jqXHR) { //on successful ajax call
-
+                    jsonToTable(data);
                 },
                 error: function (jqXHR, status) { //if not successful
                     console.log(status); //log error to javascript console

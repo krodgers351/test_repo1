@@ -9,6 +9,7 @@
     <script th:src="@{/js/lib/d3.min.js}" src="../../js/lib/d3.min.js" type="text/javascript"></script>
 
     <script th:inline="javascript" type="text/javascript">
+        /*<![CDATA[*/
         var group = "Root";
 
         $("document").ready(function (e) {
@@ -28,6 +29,7 @@
                 contentType: "application/json; charset=utf-8",
                 dataType: "json",
                 success: function (data, status, jqXHR) { //on successful ajax call
+                    console.log(data);
                     jsonToTable(data);
                     createCustomJSON(data);
                 },
@@ -50,9 +52,10 @@
             KMTree[0].children.push({ "name": "Community", "children": [] });
             KMTree[0].children.push({ "name": "Audience", "children": [] });
             for (var i = 0; i < json.length; i++) {
+                /*<![CDATA[*/
                 var jsonObj = {};
                 jsonObj["name"] = json[i].documentTitle;
-                jsonObj["document_category"] = json.documentCategory;
+                jsonObj["document_category"] = json[i].documentCategory;
                 if ($.inArray(jsonObj["document_category"], document_category) < 0) {
                     document_category.push(jsonObj["document_category"]);
                 }
@@ -70,6 +73,7 @@
                 }
                 jsonObj["link"] = json[i].documentFilename;
                 jsonArray.push(jsonObj);
+                /*]]>*/
             }
 
             addStaticChildrenToGroup(products, "products");
@@ -77,6 +81,7 @@
             addStaticChildrenToGroup(audience, "audience");
 
             function addStaticChildrenToGroup(childrenArray, childrenArrayName) {
+                /*<![CDATA[*/
                 for (var i = 0; i < KMTree[0].children.length; i++) {
                     if (KMTree[0].children[i].name.toLowerCase() == childrenArrayName) {
                         for (var j = 0; j < childrenArray.length; j++) {
@@ -86,10 +91,13 @@
                         }
                     }
                 }
+                /*]]>*/
             }
 
             for (var i = 0; i < KMTree[0].children.length; i++) {
+                /*<![CDATA[*/
                 populateByDocCategory(KMTree[0].children[i].name.toLowerCase(), getGroup(KMTree[0].children[i].name.toLowerCase(), jsonArray), KMTree[0].children[i]);
+                /*]]>*/
             }
 
             buildTree(KMTree);
@@ -116,7 +124,7 @@
                             if (nest[j].values[k].values[l][term] == node.children[i].name) {
                                 var exists = false;
                                 for (var m = 0; m < node.children[i].children.length; m++) {
-                                    if (node.children[i].children[m].name == nest[j].values[k].values[i].document_category) {
+                                    if (node.children[i].children[m].name == nest[j].values[k].values[l].document_category) {
                                         exists = true;
                                     }
                                 }
@@ -138,8 +146,12 @@
 
             var i = 0;
             duration = 750;
-            var tree = d3.layout.tree().size([height, width]);
-            var diagonal = d3.svg.diagonal().projection(function (d) { return [d.y, d.x]; });
+            var tree = d3.layout.tree()
+                .size([height, width]);
+
+            var diagonal = d3.svg.diagonal()
+                .projection(function (d) { return [d.y, d.x]; });
+
             var svg = d3.select("#treeDiv").append("svg")
                 .attr("width", width + margin.right + margin.left)
                 .attr("height", height + margin.top + margin.bottom)
@@ -291,7 +303,7 @@
             }
             /*]]>*/
         }
-
+        /*]]>*/
     </script>
 </head>
 <body>

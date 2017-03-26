@@ -25,7 +25,7 @@
 
         function creatCommunityOptions(data) {
             for (var field in data) {
-                $('<option value="' + data[field].community + '">' + data[field].community + '</option>').appendTo('#community_selection');
+                $('<option value="' + data[field].communityName + '">' + data[field].communityName + '</option>').appendTo('#community_selection');
             }
         }
 

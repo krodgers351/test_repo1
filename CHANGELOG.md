@@ -32,10 +32,10 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 - jQuery-3.2.0.min.js library
 - d3.min.js library
 - AJAX call to the Document Category, Product, and Community web services to dynamically populate form dropdown in kmcatalogentries
-- A d3 page that calls the KM Catalog web service to get JSON to dynamically build a d3 tree to - Currently not working- tree doesn't display
+- A d3 page that calls the KM Catalog web service to get JSON to show what documents exist and dynamically build a d3 tree to visualize the KM catalog - Currently not working - tree doesn't display
 
 ### Changed
-- styles.css file to add and modify styling
+- styles.css file to add/modify styling
 - MvcConfig file for document categories, departments, communities, and products
 - FullStackWebApplication file to reflect the document categories, products, and communities
 - README.md to show changes

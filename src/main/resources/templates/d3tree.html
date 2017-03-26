@@ -49,8 +49,8 @@
             KMTree[0].children.push({ "name": "Products", "children": [] });
             KMTree[0].children.push({ "name": "Community", "children": [] });
             KMTree[0].children.push({ "name": "Audience", "children": [] });
+            /*<![CDATA[*/
             for (var i = 0; i < json.length; i++) {
-                /*<![CDATA[*/
                 var jsonObj = {};
                 jsonObj["name"] = json[i].documentTitle;
                 jsonObj["document_category"] = json[i].documentCategory;
@@ -71,8 +71,8 @@
                 }
                 jsonObj["link"] = json[i].documentFilename;
                 jsonArray.push(jsonObj);
-                /*]]>*/
             }
+            /*]]>*/
 
             addStaticChildrenToGroup(products, "products");
             addStaticChildrenToGroup(community, "community");

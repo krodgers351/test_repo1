@@ -200,14 +200,6 @@
                     .text(function (d) { return d.name; })
                     .style("fill-opacity", 1e-6);
 
-                svg.append("text")
-                    .attr("x", (width / 2))
-                    .attr("y", 0)
-                    .attr("text-anchor", "middle")
-                    .style("font-size", "14px")
-                    .text(text)
-                    .style('fill', 'white');
-
                 // Transition nodes to their new position.
                 var nodeUpdate = node.transition()
                     .duration(duration)
@@ -238,7 +230,8 @@
 
                 // Update the links…
                 var link = svg.selectAll("path.link")
-                    .data(links, function (d) { return d.target.id; });
+                    .data(links, function (d) { return d.target.id; })
+                    .style('fill', 'white');
 
                 // Enter any new links at the parent's previous position.
                 link.enter().insert("path", "g")

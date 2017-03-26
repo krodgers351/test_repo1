@@ -210,7 +210,7 @@
                     .style("fill", function (d) { return d.children || d._children && (d._children.length != 0) ? "lightsteelblue" : "steelblue"; })
                     .style("stroke-dasharray", function (d) { return d.children && (d.parent || d.parent == null) ? ("3,1") : ("1,0"); })
                     .style("stroke-width", function (d) { return !d.children && !d._children ? "2px" : "3px"; })
-                    .style("stroke", function (d) { return (d._children == undefined && d.children == undefiend) || (d._children == undefined && d._children == null) ? "#7A38BB" : "steelblue"; });
+                    .style("stroke", function (d) { return (d._children == undefined && d.children == undefined) || (d._children == undefined && d._children == null) ? "#7A38BB" : "steelblue"; });
 
                 nodeUpdate.select("text")
                     .style("fill-opacity", 1);

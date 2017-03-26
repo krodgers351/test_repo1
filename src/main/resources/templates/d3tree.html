@@ -58,7 +58,7 @@
                     document_category.push(jsonObj["document_category"]);
                 }
                 jsonObj["products"] = json[i].product;
-                if ($.inArray(jsonObj["products"], product) < 0) {
+                if ($.inArray(jsonObj["products"], products) < 0) {
                     products.push(jsonObj["products"]);
                 }
                 jsonObj["community"] = json[i].community;

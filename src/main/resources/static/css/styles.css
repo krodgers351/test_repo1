@@ -212,7 +212,7 @@ a:active, nav a:active {
     padding: 4px;
     border-collapse: collapse;
     border: 1px solid black;
-    visibility: hidden;
+
 }
 
 #tblListData, td {
@@ -223,7 +223,7 @@ a:active, nav a:active {
 }
 
 #btnToggleDocuments {
-    visibility: hidden;
+
     background-color: lightsteelblue;
     font: 12px sans-serif;
     border-color: steelblue;

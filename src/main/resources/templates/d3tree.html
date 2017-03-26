@@ -32,6 +32,7 @@
 
         function jsonToTable(json) {
             /*<![CDATA[*/
+            console.log(json);
             var $table = $('#tblListData'); //create table variable from DOM table object
             $table.empty(); //clear the table
             for (var i = 0; i < json.length; i++) { //iterate through JSON array

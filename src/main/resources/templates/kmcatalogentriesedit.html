@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+<head>
+    <title>Edit KM Catalog Entry</title>
+</head>
+<body>
+    Edit KM Catalog Entry<br />
+    <form data-th-action="@{/kmcatalogentries/edit/{id}(id=${kmcatalogentry.id})}" data-th-object="${kmcatalogentry}" data-th-method="put" role="form">
+        Title: <input type="text" name="title" data-th-value="${kmcatalogentry.title}" /><br />
+        Knowledge Owner: <input type="text" name="knowledgeOwner" data-th-value="${kmcatalogentry.knowledgeOwner}"/><br />
+        Audience: <input type="text" name="audience" data-th-value="${kmcatalogentry.audience}"/><br />
+        Document Category:
+        <select id="doc_cat_selection" name="documentCategory" data-th-value="${kmcatalogentry.documentCategory}"></select><br />
+        Community:
+        <select id="community_selection" name="community" data-th-value="${kmcatalogentry.community}"></select><br />
+        Product:
+        <select id="product_selection" name="product" data-th-value="${kmcatalogentry.product}"></select><br />
+        Filename: <input type="text" name="documentFilename"  data-th-value="${kmcatalogentry.documentFilename}"/><br />
+        <input type="submit" value="Update Entry" /><br />
+    </form>
+</body>
+</html>

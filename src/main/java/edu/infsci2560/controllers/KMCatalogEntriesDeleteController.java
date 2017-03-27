@@ -26,31 +26,21 @@ import org.springframework.web.servlet.ModelAndView;
  * @author KRodgers
  */
 @Controller
-public class KMCatalogEntriesController {
+public class KMCatalogEntriesDeleteController {
     @Autowired
     private KMCatalogEntryRepository repository;
     
-    @RequestMapping(value = "kmcatalogentries", method = RequestMethod.GET)
-    public ModelAndView index() {        
-        return new ModelAndView("kmcatalogentries", "kmcatalogentries", repository.findAll());
-    }
     
-    @RequestMapping(value = "kmcatalogentries/add", method = RequestMethod.POST, consumes="application/x-www-form-urlencoded", produces = "application/json")
-    public ModelAndView create(@ModelAttribute @Valid KMCatalogEntry catalogEntry, BindingResult result) {
-        repository.save(catalogEntry);
-        return new ModelAndView("kmcatalogentries", "kmcatalogentries", repository.findAll());
-    }
-    
-	@RequestMapping(value = "kmcatalogentries/edit/{id}", method = RequestMethod.GET)
+	@RequestMapping(value = "kmcatalogentries/delete/{id}", method = RequestMethod.GET)
     public ModelAndView index(@PathVariable Long id) { 
         KMCatalogEntry entry = repository.findOne(id);
-        return new ModelAndView("kmcatalogentriesedit", "kmcatalogentries", entry);
-    }
-    
-    @RequestMapping(value = "kmcatalogentries/edit/{id}", method = RequestMethod.PUT, consumes="application/x-www-form-urlencoded", produces = "application/json")
-    public String update( @Valid KMCatalogEntry entry, BindingResult result) {
-        repository.save(entry);
-        return "redirect:/kmcatalogentries";
-    }     
+        return new ModelAndView("kmcatalogentries", "kmcatalogentries", entry);
+    }  
+	
+	@RequestMapping(value = "kmcatalogentries/delete/{id}", method = RequestMethod.DELETE)
+    public ModelAndView delete(@PathVariable Long id) {
+        repository.delete(id);
+        return new ModelAndView("kmcatalogentries", "kmcatalogentries", repository.findAll());
+    }   
 
 }

@@ -32,9 +32,9 @@ public class KMCatalogEntriesDeleteController {
     
     
 	@RequestMapping(value = "kmcatalogentries/delete/{id}", method = RequestMethod.GET)
-    public ModelAndView index(@PathVariable Long id) { 
+    public KMCatalogEntry index(@PathVariable Long id) { 
         KMCatalogEntry entry = repository.findOne(id);
-        return new ModelAndView("kmcatalogentries", "kmcatalogentries", entry);
+        return entry;
     }  
 	
 	@RequestMapping(value = "kmcatalogentries/delete/{id}", method = RequestMethod.DELETE)

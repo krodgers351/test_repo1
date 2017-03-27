@@ -44,7 +44,7 @@ public class KMCatalogEntriesController {
 	@RequestMapping(value = "kmcatalogentries/edit/{id}", method = RequestMethod.GET)
     public ModelAndView index(@PathVariable Long id) { 
         KMCatalogEntry entry = repository.findOne(id);
-        return new ModelAndView("catalogEntryEdit", "kmcatalogentries", entry);
+        return new ModelAndView("kmcatalogentriesedit", "kmcatalogentries", entry);
     }
     
     @RequestMapping(value = "kmcatalogentries/edit/{id}", method = RequestMethod.PUT, consumes="application/x-www-form-urlencoded", produces = "application/json")

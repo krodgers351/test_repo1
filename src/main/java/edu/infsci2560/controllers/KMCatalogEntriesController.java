@@ -60,7 +60,6 @@ public class KMCatalogEntriesController {
 	//}
 	
 	@RequestMapping(value = "kmcatalogentries/delete/{id}", method = RequestMethod.DELETE)
-    @ResponseBody
     public ModelAndView delete(@PathVariable Long id) {
         repository.delete(id);
         return new ModelAndView("kmcatalogentries", "kmcatalogentries", repository.findAll());

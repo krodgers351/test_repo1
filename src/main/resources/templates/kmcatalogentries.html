@@ -99,6 +99,7 @@
                         <td data-th-text="${entry.product}"></td>
 						<td data-th-text="${entry.documentFilename}"></td>
                         <td><a data-th-href="@{/kmcatalogentries/edit/{id}(id=${entry.id})}">edit</a></td>
+                        <td><a data-th-href="@{/kmcatalogentries/delete/{id}(id=${entry.id})}">delete</a></td>
 					</tr>
 				</table>
 			</div>

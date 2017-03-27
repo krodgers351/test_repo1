@@ -7,21 +7,94 @@ and open the template in the editor.
 <html>
 <head>
     <title>Edit KM Catalog Entry</title>
+    <script th:src="@{/js/lib/jquery-3.2.0.min.js}" src="../../js/lib/jquery-3.1.1.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/styles.css}" href="../../css/styles.css" />
+
+    <script th:inline="javascript" type="text/javascript">
+        $("document").ready(function (e) {
+            /*<![CDATA[*/
+            getDataFromWebService(/*[[@{/public/api/documentcategories}]]*/, "doc");
+            getDataFromWebService(/*[[@{/public/api/communities}]]*/, "community");
+            getDataFromWebService(/*[[@{/public/api/products}]]*/, "product");
+            /*]]>*/
+        });
+
+        function creatDocOptions(data) {
+            for (var field in data) {
+                $('<option value="' + data[field].categoryName + '">' + data[field].categoryName + '</option>').appendTo('#doc_cat_selection');
+            }
+        }
+
+        function creatCommunityOptions(data) {
+            for (var field in data) {
+                $('<option value="' + data[field].communityName + '">' + data[field].communityName + '</option>').appendTo('#community_selection');
+            }
+        }
+
+        function creatProductOptions(data) {
+            for (var field in data) {
+                $('<option value="' + data[field].productName + '">' + data[field].productName + '</option>').appendTo('#product_selection');
+            }
+        }
+
+        function getDataFromWebService(targetUrl, targetDOM) {
+            $.ajax({
+                type: "GET", //method type of GET
+                url: targetUrl, //url passed to function
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (data, status, jqXHR) { //on successful ajax call
+                    if (targetDOM == "doc") {
+                        creatDocOptions(data);
+                    }
+                    if (targetDOM == "community") {
+                        creatCommunityOptions(data);
+                    }
+                    if (targetDOM == "product") {
+                        creatProductOptions(data);
+                    }
+                },
+                error: function (jqXHR, status) { //if not successful
+                    console.log(status); //log error to javascript console
+                }
+            });
+        }
+
+    </script>
 </head>
 <body>
-    Edit KM Catalog Entry<br />
-    <form data-th-action="@{/kmcatalogentries/edit/{id}(id=${entry.id})}" data-th-object="${entry}" data-th-method="put" role="form">
-        Title: <input type="text" name="title" data-th-value="${entry.documentTitle}" /><br />
-        Knowledge Owner: <input type="text" name="knowledgeOwner" data-th-value="${entry.knowledgeOwner}"/><br />
-        Audience: <input type="text" name="audience" data-th-value="${entry.audience}"/><br />
-        Document Category:
-        <select id="doc_cat_selection" name="documentCategory" data-th-value="${entry.documentCategory}"></select><br />
-        Community:
-        <select id="community_selection" name="community" data-th-value="${entry.community}"></select><br />
-        Product:
-        <select id="product_selection" name="product" data-th-value="${entry.product}"></select><br />
-        Filename: <input type="text" name="documentFilename"  data-th-value="${entry.documentFilename}"/><br />
-        <input type="submit" value="Update Entry" /><br />
-    </form>
+    <header>
+        <h1 data-th-inline="text"><img th:src="@{/images/logo.jpg}" alt="" />Knowledge Management System</h1>
+    </header>
+    <section id="nav">
+        <nav>
+            <ul>
+                <li><a th:href="@{/kmcatalogentries}">Home</a></li>
+                <li><a th:href="@{/documentcategories}">Document Categories</a></li>
+                <li><a th:href="@{/products}">Products</a></li>
+                <li><a th:href="@{/departments}">Departments</a></li>
+                <li><a th:href="@{/communities}">Communities</a></li>
+                <li><a th:href="@{/d3tree}">D3 Tree</a></li>
+            </ul>
+        </nav>
+    </section>
+    <section class="content">
+        <div id="addEntry">
+            <h2>Edit KM Catalog Entry</h2>
+            <form data-th-action="@{/kmcatalogentries/edit/{id}(id=${entry.id})}" data-th-object="${entry}" data-th-method="put" role="form">
+                Title: <input type="text" name="title" data-th-value="${entry.documentTitle}" /><br />
+                Knowledge Owner: <input type="text" name="knowledgeOwner" data-th-value="${entry.knowledgeOwner}" /><br />
+                Audience: <input type="text" name="audience" data-th-value="${entry.audience}" /><br />
+                Document Category:
+                <select id="doc_cat_selection" name="documentCategory" data-th-value="${entry.documentCategory}"></select><br />
+                Community:
+                <select id="community_selection" name="community" data-th-value="${entry.community}"></select><br />
+                Product:
+                <select id="product_selection" name="product" data-th-value="${entry.product}"></select><br />
+                Filename: <input type="text" name="documentFilename" data-th-value="${entry.documentFilename}" /><br />
+                <input type="submit" value="Update Entry" /><br />
+            </form>
+        </div>
+    </section>
 </body>
 </html>

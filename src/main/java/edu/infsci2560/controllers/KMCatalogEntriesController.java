@@ -40,4 +40,16 @@ public class KMCatalogEntriesController {
         return new ModelAndView("kmcatalogentries", "kmcatalogentries", repository.findAll());
     }
     
+	@RequestMapping(value = "kmcatalogentries/edit/{id}", method = RequestMethod.GET)
+    public ModelAndView index(@PathVariable Long id) { 
+        KMCatalogEntry entry = repository.findOne(id);
+        return new ModelAndView("catalogEntryEdit", "kmcatalogentries", entry);
+    }
+    
+    @RequestMapping(value = "kmcatalogentries/edit/{id}", method = RequestMethod.PUT, consumes="application/x-www-form-urlencoded", produces = "application/json")
+    public String update( @Valid KMCatalogEntry entry, BindingResult result) {
+        repository.save(entry);
+        return "redirect:/kmcatalogentries";
+    }        
+
 }

@@ -51,6 +51,19 @@ public class KMCatalogEntriesController {
     public String update( @Valid KMCatalogEntry entry, BindingResult result) {
         repository.save(entry);
         return "redirect:/kmcatalogentries";
-    }        
+    }     
+	
+	//@RequestMapping(value = "kmcatalogentries/delete/{id}", method = RequestMethod.DELETE)
+	//public void delete(@PathVariable long id) {
+	//  repository.save(catalogEntry);
+    //    return new ModelAndView("kmcatalogentries", "kmcatalogentries", repository.findAll());
+	//}
+	
+	@RequestMapping(value = "kmcatalogentries/delete/{id}", method = RequestMethod.DELETE)
+    @ResponseBody
+    public ModelAndView delete(@PathVariable Long id) {
+        repository.delete(id);
+        return new ModelAndView("kmcatalogentries", "kmcatalogentries", repository.findAll());
+    }   
 
 }

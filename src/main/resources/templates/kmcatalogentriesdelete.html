@@ -9,58 +9,6 @@ and open the template in the editor.
     <title>Edit KM Catalog Entry</title>
     <script th:src="@{/js/lib/jquery-3.2.0.min.js}" src="../../js/lib/jquery-3.1.1.min.js" type="text/javascript"></script>
     <link rel="stylesheet" type="text/css" th:href="@{/css/styles.css}" href="../../css/styles.css" />
-
-    <script th:inline="javascript" type="text/javascript">
-        $("document").ready(function (e) {
-            /*<![CDATA[*/
-            getDataFromWebService(/*[[@{/public/api/documentcategories}]]*/, "doc");
-            getDataFromWebService(/*[[@{/public/api/communities}]]*/, "community");
-            getDataFromWebService(/*[[@{/public/api/products}]]*/, "product");
-            /*]]>*/
-        });
-
-        function creatDocOptions(data) {
-            for (var field in data) {
-                $('<option value="' + data[field].categoryName + '">' + data[field].categoryName + '</option>').appendTo('#doc_cat_selection');
-            }
-        }
-
-        function creatCommunityOptions(data) {
-            for (var field in data) {
-                $('<option value="' + data[field].communityName + '">' + data[field].communityName + '</option>').appendTo('#community_selection');
-            }
-        }
-
-        function creatProductOptions(data) {
-            for (var field in data) {
-                $('<option value="' + data[field].productName + '">' + data[field].productName + '</option>').appendTo('#product_selection');
-            }
-        }
-
-        function getDataFromWebService(targetUrl, targetDOM) {
-            $.ajax({
-                type: "GET", //method type of GET
-                url: targetUrl, //url passed to function
-                contentType: "application/json; charset=utf-8",
-                dataType: "json",
-                success: function (data, status, jqXHR) { //on successful ajax call
-                    if (targetDOM == "doc") {
-                        creatDocOptions(data);
-                    }
-                    if (targetDOM == "community") {
-                        creatCommunityOptions(data);
-                    }
-                    if (targetDOM == "product") {
-                        creatProductOptions(data);
-                    }
-                },
-                error: function (jqXHR, status) { //if not successful
-                    console.log(status); //log error to javascript console
-                }
-            });
-        }
-
-    </script>
 </head>
 <body>
     <header>

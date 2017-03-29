@@ -28,34 +28,32 @@ and open the template in the editor.
     </section>
     <section class="content">
         <div id="deleteEntry">
-            <h2>Delete KM Catalog Entry</h2>
-            <div>
-                <table id="catalog">
-                    <tr>
-                        <th>ID</th>
-                        <th>Title</th>
-                        <th>Owner</th>
-                        <th>Audience</th>
-                        <th>Category</th>
-                        <th>Community</th>
-                        <th>Product</th>
-                        <th>Filename</th>
-                    </tr>
-                    <tr data-th-each="entry : ${kmcatalogentries}">
-                        <td data-th-text="${entry.id}"></td>
-                        <td data-th-text="${entry.documentTitle}"></td>
-                        <td data-th-text="${entry.knowledgeOwner}"></td>
-                        <td data-th-text="${entry.audience}"></td>
-                        <td data-th-text="${entry.documentCategory}"></td>
-                        <td data-th-text="${entry.community}"></td>
-                        <td data-th-text="${entry.product}"></td>
-                        <td data-th-text="${entry.documentFilename}"></td>
-                        <td><a data-th-href="@{/kmcatalogentries/edit/{id}(id=${entry.id})}">edit</a></td>
-                        <td><a data-th-href="@{/kmcatalogentries/delete/{id}(id=${entry.id})}">delete</a></td>
-                    </tr>
-                </table>
-            </div>
+            <h2>Delete KM Catalog Entry</h2>           
             <form data-th-action="@{/kmcatalogentries/delete/{id}(id=${entry.id})}" data-th-object="${entry}" data-th-method="delete" role="form">
+                <div>
+                    <table id="catalog">
+                        <tr>
+                            <th>ID</th>
+                            <th>Title</th>
+                            <th>Owner</th>
+                            <th>Audience</th>
+                            <th>Category</th>
+                            <th>Community</th>
+                            <th>Product</th>
+                            <th>Filename</th>
+                        </tr>
+                        <tr>
+                            <td data-th-text="${entry.id}"></td>
+                            <td data-th-text="${entry.documentTitle}"></td>
+                            <td data-th-text="${entry.knowledgeOwner}"></td>
+                            <td data-th-text="${entry.audience}"></td>
+                            <td data-th-text="${entry.documentCategory}"></td>
+                            <td data-th-text="${entry.community}"></td>
+                            <td data-th-text="${entry.product}"></td>
+                            <td data-th-text="${entry.documentFilename}"></td>
+                        </tr>
+                    </table>
+                </div>
                 <input type="submit" value="Delete Entry" /><br />
             </form>
         </div>

@@ -29,11 +29,7 @@ import org.springframework.web.servlet.ModelAndView;
 public class KMCatalogEntriesDeleteController {
     @Autowired
     private KMCatalogEntryRepository repository;
-    
-	@RequestMapping(value = "kmcatalogentries", method = RequestMethod.GET)
-    public ModelAndView index() {        
-        return new ModelAndView("kmcatalogentries", "kmcatalogentries", repository.findAll());
-    }
+
     
 	@RequestMapping(value = "kmcatalogentries/delete/{id}", method = RequestMethod.GET)
     public ModelAndView index(@PathVariable Long id) { 

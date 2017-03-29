@@ -86,11 +86,13 @@ and open the template in the editor.
                 Knowledge Owner: <input type="text" name="knowledgeOwner" data-th-value="${entry.knowledgeOwner}" /><br />
                 Audience: <input type="text" name="audience" data-th-value="${entry.audience}" /><br />
                 Document Category:
-                <select id="doc_cat_selection" name="documentCategory" data-th-value="${entry.documentCategory}" data-th-text="${entry.documentCategory}"></select><br />
+                <select id="doc_cat_selection" name="documentCategory" data-th-value="${entry.documentCategory}"></select><br />
                 Community:
-                <select id="community_selection" name="community" data-th-value="${entry.community}" data-th-text="${entry.community}"></select><br />
+                <select id="community_selection" name="community" data-th-value="${entry.community}"></select><br />
                 Product:
-                <select id="product_selection" name="product" data-th-value="${entry.product}" data-th-text="${entry.product}"></select><br />
+                <select id="product_selection" name="product" data-th-value="${entry.product}">
+                    <option data-th-value="${entry.product}" data-th-text="${entry.product}" data-th-selected="${entry.product}"></option>
+                </select><br />
                 Filename: <input type="text" name="documentFilename" data-th-value="${entry.documentFilename}" /><br />
                 <input type="submit" value="Update Entry" /><br />
             </form>

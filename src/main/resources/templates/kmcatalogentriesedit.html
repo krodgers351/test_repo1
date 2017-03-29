@@ -11,6 +11,8 @@ and open the template in the editor.
     <link rel="stylesheet" type="text/css" th:href="@{/css/styles.css}" href="../../css/styles.css" />
 
     <script th:inline="javascript" type="text/javascript">
+        var myCategory;
+        var myCommunity;
         var myProduct;
 
         $("document").ready(function (e) {
@@ -23,13 +25,17 @@ and open the template in the editor.
 
         function creatDocOptions(data) {
             for (var field in data) {
-                $('<option value="' + data[field].categoryName + '">' + data[field].categoryName + '</option>').appendTo('#doc_cat_selection');
+                if (data[field].categoryName != myCategory) {
+                    $('<option value="' + data[field].categoryName + '">' + data[field].categoryName + '</option>').appendTo('#doc_cat_selection');
+                }
             }
         }
 
         function creatCommunityOptions(data) {
             for (var field in data) {
-                $('<option value="' + data[field].communityName + '">' + data[field].communityName + '</option>').appendTo('#community_selection');
+                if (data[field].communityName != myCommunity) {
+                    $('<option value="' + data[field].communityName + '">' + data[field].communityName + '</option>').appendTo('#community_selection');
+                }
             }
         }
 
@@ -88,6 +94,8 @@ and open the template in the editor.
             <form data-th-action="@{/kmcatalogentries/edit/{id}(id=${entry.id})}" data-th-object="${entry}" data-th-method="put" role="form">
                 <script th:inline="javascript">
                     /*<![CDATA[*/
+                    myCategory = /*[[${entry.documentCategory}]]*/ 'value';
+                    myCommunity = /*[[${entry.community}]]*/ 'value';
                     myProduct = /*[[${entry.product}]]*/ 'value';
                     /*]]>*/
                 </script>

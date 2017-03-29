@@ -7,6 +7,15 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 ### Added
 - TBD.
 
+## [v1.4.1] - 2017-03-28
+### Added
+- EDIT/DELETE controller options for kmcatalogentries
+- Edit html page to edit a km catalog entry
+- Delete html page to delete a km catalog entry
+
+### Changed
+- Fixed javascript so the D3 tree displays and functions.
+
 ## [v1.4] - 2017-03-25
 ### Added
 - Document Category Entry entity
@@ -71,7 +80,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 - Configured developer workspace
 - Deployed to Heroku
 
-[Unreleased]: https://github.com/infsci2560sp17/full-stack-web-krodgers351/compare/v1.4...HEAD
+[Unreleased]: https://github.com/infsci2560sp17/full-stack-web-krodgers351/compare/v1.4.1...HEAD
+[v1.4.1]: https://github.com/infsci2560sp17/full-stack-web-krodgers351/compare/v1.4...v1.4.1
 [v1.4]: https://github.com/infsci2560sp17/full-stack-web-krodgers351/compare/v1.3...v1.4
 [v1.3]: https://github.com/infsci2560sp17/full-stack-web-krodgers351/compare/v1.2...v1.3
 [v1.2]: https://github.com/infsci2560sp17/full-stack-web-krodgers351/compare/v1.1...v1.2

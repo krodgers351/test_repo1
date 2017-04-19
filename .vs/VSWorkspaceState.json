@@ -1,0 +1,20 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\.mvn\\wrapper",
+    "\\src",
+    "\\src\\main",
+    "\\src\\main\\resources",
+    "\\src\\main\\resources\\static",
+    "\\src\\main\\resources\\static\\css",
+    "\\src\\main\\resources\\static\\js",
+    "\\src\\main\\resources\\templates",
+    "\\src\\test",
+    "\\src\\test\\java",
+    "\\src\\test\\java\\edu",
+    "\\src\\test\\java\\edu\\infsci2560",
+    "\\src\\test\\java\\edu\\infsci2560\\controllers"
+  ],
+  "SelectedNode": "\\CHANGELOG.md",
+  "PreviewInSolutionExplorer": false
+}

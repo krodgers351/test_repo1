@@ -30,9 +30,10 @@ header{
 }
 
 .content {
-	float:right;
-	width:82%;
-	border-radius: 0px 50px 50px 50px;
+    float: right;
+    width: 82%;
+    border-radius: 0px 50px 50px 50px;
+    font-family: Michroma, Arial, sans-serif;
 }
 
 .content img{
@@ -129,7 +130,7 @@ h1 {
     margin-bottom: 0.5%;
     margin-top: 0.5%;
     letter-spacing: 2px;
-    font-family: Orbitron, Arial, sans-serif;
+    font-family: Virgo, Arial, sans-serif;
 }
 
 img {

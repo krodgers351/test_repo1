@@ -74,38 +74,38 @@ public class FullStackWebApplication {
 		pdRepo.save(u = new Product(6L, "Product F"));
 
 		DepartmentRepository dpRepo = ctx.getBean(DepartmentRepository.class);
-		dpRepo.save(h = new Department(1L, "Finance"));
-		dpRepo.save(i = new Department(2L, "IT"));
+		dpRepo.save(h = new Department(1L, "Simulation"));
+		dpRepo.save(i = new Department(2L, "IT & Software Development"));
 		dpRepo.save(j = new Department(3L, "Engineering"));
 
 		KMCatalogEntryRepository kmRepo = ctx.getBean(KMCatalogEntryRepository.class);
-		kmRepo.save(new KMCatalogEntry(1L, "C# Coding Standards", "John Doe", "UnitA", y.getCategoryName(), a.getCommunityName(), m.getProductName(), "csharpstandard.pdf"));
-        kmRepo.save(new KMCatalogEntry(2L, "Contaminated Sample Procedure", "Jane Smith", "UnitC", y.getCategoryName(), b.getCommunityName(), n.getProductName(), "contaminated_sample_procedure.pdf"));
-        kmRepo.save(new KMCatalogEntry(3L, "Communications Wiring Diagram for Product X", "Jimmy Jones", "UnitB", z.getCategoryName(), c.getCommunityName(), o.getProductName(), "x_comms_wiring_diagram.pdf"));
+		kmRepo.save(new KMCatalogEntry(1L, "C# Coding Standards", "John Doe", i.getDepartmentName(), y.getCategoryName(), a.getCommunityName(), m.getProductName(), "csharpstandard.pdf"));
+        kmRepo.save(new KMCatalogEntry(2L, "Contaminated Sample Procedure", "Jane Smith", j.getDepartmentName(), y.getCategoryName(), b.getCommunityName(), n.getProductName(), "contaminated_sample_procedure.pdf"));
+        kmRepo.save(new KMCatalogEntry(3L, "Communications Wiring Diagram for Product X", "Jimmy Jones",j.getDepartmentName(), z.getCategoryName(), c.getCommunityName(), o.getProductName(), "x_comms_wiring_diagram.pdf"));
 
-		kmRepo.save(new KMCatalogEntry(1L, "HTML Coding Standards", "John Doe", "UnitB", y.getCategoryName(), d.getCommunityName(), q.getProductName(), "htmlstandard.pdf"));
-        kmRepo.save(new KMCatalogEntry(2L, "Electrial Specs", "Julia Newton", "UnitM", t.getCategoryName(), c.getCommunityName(), q.getProductName(), "electricalspecs.pdf"));
-        kmRepo.save(new KMCatalogEntry(3L, "Audit Results 2015", "Caitlin Walker", "UnitA", r.getCategoryName(), e.getCommunityName(), u.getProductName(), "auditresults2015.pdf"));
+		kmRepo.save(new KMCatalogEntry(1L, "HTML Coding Standards", "John Doe", i.getDepartmentName(), y.getCategoryName(), d.getCommunityName(), q.getProductName(), "htmlstandard.pdf"));
+        kmRepo.save(new KMCatalogEntry(2L, "Electrial Specs", "Julia Newton", j.getDepartmentName(), t.getCategoryName(), c.getCommunityName(), q.getProductName(), "electricalspecs.pdf"));
+        kmRepo.save(new KMCatalogEntry(3L, "Audit Results 2015", "Caitlin Walker", j.getDepartmentName(), r.getCategoryName(), e.getCommunityName(), u.getProductName(), "auditresults2015.pdf"));
 
-		kmRepo.save(new KMCatalogEntry(1L, "Configuring a Build", "Jason Lloyd", "UnitD", r.getCategoryName(), a.getCommunityName(), p.getProductName(), "build_config.pdf"));
-        kmRepo.save(new KMCatalogEntry(2L, "Document Requirements", "Henry Wagner", "UnitB", z.getCategoryName(), b.getCommunityName(), o.getProductName(), "document_req.pdf"));
-        kmRepo.save(new KMCatalogEntry(3L, "Noble Gases", "Natalee Harrell", "UnitA", y.getCategoryName(), e.getCommunityName(), u.getProductName(), "noblegases.pdf"));
+		kmRepo.save(new KMCatalogEntry(1L, "Configuring a Build", "Jason Lloyd", i.getDepartmentName(), r.getCategoryName(), a.getCommunityName(), p.getProductName(), "build_config.pdf"));
+        kmRepo.save(new KMCatalogEntry(2L, "Document Requirements", "Henry Wagner", j.getDepartmentName(), z.getCategoryName(), b.getCommunityName(), o.getProductName(), "document_req.pdf"));
+        kmRepo.save(new KMCatalogEntry(3L, "Noble Gases", "Natalee Harrell", j.getDepartmentName(), y.getCategoryName(), e.getCommunityName(), u.getProductName(), "noblegases.pdf"));
 
-		kmRepo.save(new KMCatalogEntry(1L, "Product C User Manual", "Aiden Key", "UnitM", s.getCategoryName(), d.getCommunityName(), u.getProductName(), "prodc_usermanual.pdf"));
-        kmRepo.save(new KMCatalogEntry(2L, "Safety Practices", "Peyton Watts", "UnitC", x.getCategoryName(), e.getCommunityName(), n.getProductName(), "safety.pdf"));
-        kmRepo.save(new KMCatalogEntry(3L, "Strength of Materials", "Troy Glover", "UnitD", t.getCategoryName(), b.getCommunityName(), q.getProductName(), "materials.pdf"));
+		kmRepo.save(new KMCatalogEntry(1L, "Product C User Manual", "Aiden Key", i.getDepartmentName(), s.getCategoryName(), d.getCommunityName(), u.getProductName(), "prodc_usermanual.pdf"));
+        kmRepo.save(new KMCatalogEntry(2L, "Safety Practices", "Peyton Watts", j.getDepartmentName(), x.getCategoryName(), e.getCommunityName(), n.getProductName(), "safety.pdf"));
+        kmRepo.save(new KMCatalogEntry(3L, "Strength of Materials", "Troy Glover", j.getDepartmentName(), t.getCategoryName(), b.getCommunityName(), q.getProductName(), "materials.pdf"));
 
-		kmRepo.save(new KMCatalogEntry(1L, "Naming Conventions", "Rex Hardy", "UnitA", y.getCategoryName(), a.getCommunityName(), m.getProductName(), "naming.pdf"));
-        kmRepo.save(new KMCatalogEntry(2L, "Measuring Forces", "Nyla Potter", "UnitM", s.getCategoryName(), b.getCommunityName(), u.getProductName(), "forces.pdf"));
-        kmRepo.save(new KMCatalogEntry(3L, "Capacitors", "Levi Caldwell", "UnitC", t.getCategoryName(), c.getCommunityName(), o.getProductName(), "capacitors.pdf"));
+		kmRepo.save(new KMCatalogEntry(1L, "Naming Conventions", "Rex Hardy", i.getDepartmentName(), y.getCategoryName(), a.getCommunityName(), m.getProductName(), "naming.pdf"));
+        kmRepo.save(new KMCatalogEntry(2L, "Measuring Forces", "Nyla Potter", j.getDepartmentName(), s.getCategoryName(), b.getCommunityName(), u.getProductName(), "forces.pdf"));
+        kmRepo.save(new KMCatalogEntry(3L, "Capacitors", "Levi Caldwell", j.getDepartmentName(), t.getCategoryName(), c.getCommunityName(), o.getProductName(), "capacitors.pdf"));
 
-		kmRepo.save(new KMCatalogEntry(1L, "Firewall Configuration", "Claire Smith", "UnitB", s.getCategoryName(), d.getCommunityName(), m.getProductName(), "firewall_config.pdf"));
-        kmRepo.save(new KMCatalogEntry(2L, "pH Monitoring", "Jason Lloyd", "UnitD", x.getCategoryName(), e.getCommunityName(), n.getProductName(), "contaminated_sample_procedure.pdf"));
-        kmRepo.save(new KMCatalogEntry(3L, "Airflow Simulation", "Henry Wagner", "UnitB", z.getCategoryName(), f.getCommunityName(), o.getProductName(), "airflow_sim.pdf"));
+		kmRepo.save(new KMCatalogEntry(1L, "Firewall Configuration", "Claire Smith", i.getDepartmentName(), s.getCategoryName(), d.getCommunityName(), m.getProductName(), "firewall_config.pdf"));
+        kmRepo.save(new KMCatalogEntry(2L, "pH Monitoring", "Jason Lloyd", j.getDepartmentName(), x.getCategoryName(), e.getCommunityName(), n.getProductName(), "contaminated_sample_procedure.pdf"));
+        kmRepo.save(new KMCatalogEntry(3L, "Airflow Simulation", "Henry Wagner", h.getDepartmentName(), z.getCategoryName(), f.getCommunityName(), o.getProductName(), "airflow_sim.pdf"));
 
-		kmRepo.save(new KMCatalogEntry(1L, "TFS", "Aiden Key", "UnitA", s.getCategoryName(), a.getCommunityName(), p.getProductName(), "tfs_usermanual.pdf"));
-        kmRepo.save(new KMCatalogEntry(2L, "Engine Simulation", "Jane Smith", "UnitC", y.getCategoryName(), f.getCommunityName(), q.getProductName(), "engine_sim.pdf"));
-        kmRepo.save(new KMCatalogEntry(3L, "Resistor Color Codes", "Nyla Potter", "UnitM", t.getCategoryName(), c.getCommunityName(), u.getProductName(), "resistor_color_codes.pdf"));
+		kmRepo.save(new KMCatalogEntry(1L, "TFS", "Aiden Key", i.getDepartmentName(), s.getCategoryName(), a.getCommunityName(), p.getProductName(), "tfs_usermanual.pdf"));
+        kmRepo.save(new KMCatalogEntry(2L, "Engine Simulation", "Jane Smith", h.getDepartmentName(), y.getCategoryName(), f.getCommunityName(), q.getProductName(), "engine_sim.pdf"));
+        kmRepo.save(new KMCatalogEntry(3L, "Resistor Color Codes", "Nyla Potter", j.getDepartmentName(), t.getCategoryName(), c.getCommunityName(), u.getProductName(), "resistor_color_codes.pdf"));
 		
 	}
 

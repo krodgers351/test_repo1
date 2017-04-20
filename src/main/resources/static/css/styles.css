@@ -232,15 +232,23 @@ a:active, nav a:active {
 @font-face {
     font-family: 'DistantGalaxy';
     src: url('../fonts/distgrg_-webfont.eot');
-    src: url('../fonts/distgrg_-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/distgrg_-webfont.woff2') format('woff2'), url('../fonts/distgrg_-webfont.woff') format('woff'), url('../fonts/distgrg_-webfont.ttf') format('truetype'), url('../fonts/distgrg_-webfont.svg#distant_galaxyregular') format('svg');
+    src: url('../fonts/distgrg_-webfont.eot?#iefix') format('embedded-opentype'), 
+        url('../fonts/distgrg_-webfont.woff2') format('woff2'), 
+        url('../fonts/distgrg_-webfont.woff') format('woff'), 
+        url('../fonts/distgrg_-webfont.ttf') format('truetype'),
+        url('../fonts/distgrg_-webfont.svg#distant_galaxyregular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Michroma';
-    src: url('@{/fonts/michroma-webfont.eot}');
-    src: url('@{/fonts/michroma-webfont.eot?#iefix}') format('embedded-opentype'), url('@{/fonts/michroma-webfont.woff2}') format('woff2'), url('@{/fonts/michroma-webfont.woff}') format('woff'), url('@{/fonts/michroma-webfont.ttf}') format('truetype'), url('@{/fonts/michroma-webfont.svg#michromaregular}') format('svg');
+    src: url('fonts/michroma-webfont.eot');
+    src: url('fonts/michroma-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/michroma-webfont.woff2') format('woff2'), 
+        url('fonts/michroma-webfont.woff') format('woff'), 
+        url('fonts/michroma-webfont.ttf') format('truetype'), 
+        url('fonts/michroma-webfont.svg#michromaregular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -248,7 +256,11 @@ a:active, nav a:active {
 @font-face {
     font-family: 'Orbitron';
     src: url('../fonts/orbitron-black-webfont.eot');
-    src: url('../fonts/orbitron-black-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/orbitron-black-webfont.woff2') format('woff2'), url('../fonts/orbitron-black-webfont.woff') format('woff'), url('../fonts/orbitron-black-webfont.ttf') format('truetype'), url('../fonts/orbitron-black-webfont.svg#orbitronblack') format('svg');
+    src: url('../fonts/orbitron-black-webfont.eot?#iefix') format('embedded-opentype'), 
+        url('../fonts/orbitron-black-webfont.woff2') format('woff2'), 
+        url('../fonts/orbitron-black-webfont.woff') format('woff'), 
+        url('../fonts/orbitron-black-webfont.ttf') format('truetype'), 
+        url('../fonts/orbitron-black-webfont.svg#orbitronblack') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -256,7 +268,11 @@ a:active, nav a:active {
 @font-face {
     font-family: 'Virgo';
     src: url('../fonts/virgo-webfont.eot');
-    src: url('../fonts/virgo-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/virgo-webfont.woff2') format('woff2'), url('../fonts/virgo-webfont.woff') format('woff'), url('../fonts/virgo-webfont.ttf') format('truetype'), url('../fonts/virgo-webfont.svg#virgo_01regular') format('svg');
+    src: url('../fonts/virgo-webfont.eot?#iefix') format('embedded-opentype'), 
+        url('../fonts/virgo-webfont.woff2') format('woff2'), 
+        url('../fonts/virgo-webfont.woff') format('woff'), 
+        url('../fonts/virgo-webfont.ttf') format('truetype'), 
+        url('../fonts/virgo-webfont.svg#virgo_01regular') format('svg');
     font-weight: normal;
     font-style: normal;
 }

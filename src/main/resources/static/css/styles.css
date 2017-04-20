@@ -42,7 +42,6 @@ header{
 }
 
 .content ul {
-    font-family: Michroma, Arial, sans-serif;
     text-align: center;
 }
 
@@ -61,10 +60,11 @@ header{
 }
 
 #nav li {
-	display: block;
-	margin-top: 3%;
-	white-space: nowrap;
-	font-size:1.1em;	
+    display: block;
+    margin-top: 3%;
+    white-space: nowrap;
+    font-size: 1.1em;
+    font-family: Michroma, Arial, sans-serif;
 }
 
 #nav ul{

@@ -87,12 +87,12 @@ public class FullStackWebApplication {
         kmRepo.save(new KMCatalogEntry(2L, "Electrial Specs", "Julia Newton", "UnitM", t.getCategoryName(), c.getCommunityName(), q.getProductName(), "electricalspecs.pdf"));
         kmRepo.save(new KMCatalogEntry(3L, "Audit Results 2015", "Caitlin Walker", "UnitA", r.getCategoryName(), e.getCommunityName(), u.getProductName(), "auditresults2015.pdf"));
 
-		kmRepo.save(new KMCatalogEntry(1L, "Safety Practices", "Jason Lloyd", "UnitD", r.getCategoryName(), a.getCommunityName(), p.getProductName(), "safety.pdf"));
+		kmRepo.save(new KMCatalogEntry(1L, "Configuring a Build", "Jason Lloyd", "UnitD", r.getCategoryName(), a.getCommunityName(), p.getProductName(), "build_config.pdf"));
         kmRepo.save(new KMCatalogEntry(2L, "Document Requirements", "Henry Wagner", "UnitB", z.getCategoryName(), b.getCommunityName(), o.getProductName(), "document_req.pdf"));
         kmRepo.save(new KMCatalogEntry(3L, "Noble Gases", "Natalee Harrell", "UnitA", y.getCategoryName(), e.getCommunityName(), u.getProductName(), "noblegases.pdf"));
 
 		kmRepo.save(new KMCatalogEntry(1L, "Product C User Manual", "Aiden Key", "UnitM", s.getCategoryName(), d.getCommunityName(), u.getProductName(), "prodc_usermanual.pdf"));
-        kmRepo.save(new KMCatalogEntry(2L, "Circuits 101", "Peyton Watts", "UnitC", x.getCategoryName(), e.getCommunityName(), n.getProductName(), "circuits.pdf"));
+        kmRepo.save(new KMCatalogEntry(2L, "Safety Practices", "Peyton Watts", "UnitC", x.getCategoryName(), e.getCommunityName(), n.getProductName(), "safety.pdf"));
         kmRepo.save(new KMCatalogEntry(3L, "Strength of Materials", "Troy Glover", "UnitD", t.getCategoryName(), b.getCommunityName(), q.getProductName(), "materials.pdf"));
 
 		kmRepo.save(new KMCatalogEntry(1L, "Naming Conventions", "Rex Hardy", "UnitA", y.getCategoryName(), a.getCommunityName(), m.getProductName(), "naming.pdf"));
@@ -101,7 +101,7 @@ public class FullStackWebApplication {
 
 		kmRepo.save(new KMCatalogEntry(1L, "Firewall Configuration", "Claire Smith", "UnitB", s.getCategoryName(), d.getCommunityName(), m.getProductName(), "firewall_config.pdf"));
         kmRepo.save(new KMCatalogEntry(2L, "pH Monitoring", "Jason Lloyd", "UnitD", x.getCategoryName(), e.getCommunityName(), n.getProductName(), "contaminated_sample_procedure.pdf"));
-        kmRepo.save(new KMCatalogEntry(3L, "Airflow Simulation", "Henry Wagner", "UnitB", z.getCategoryName(), b.getCommunityName(), o.getProductName(), "airflow_sim.pdf"));
+        kmRepo.save(new KMCatalogEntry(3L, "Airflow Simulation", "Henry Wagner", "UnitB", z.getCategoryName(), f.getCommunityName(), o.getProductName(), "airflow_sim.pdf"));
 
 		kmRepo.save(new KMCatalogEntry(1L, "TFS", "Aiden Key", "UnitA", s.getCategoryName(), a.getCommunityName(), p.getProductName(), "tfs_usermanual.pdf"));
         kmRepo.save(new KMCatalogEntry(2L, "Engine Simulation", "Jane Smith", "UnitC", y.getCategoryName(), f.getCommunityName(), q.getProductName(), "engine_sim.pdf"));

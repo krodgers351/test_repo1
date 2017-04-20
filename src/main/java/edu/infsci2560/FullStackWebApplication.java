@@ -101,7 +101,7 @@ public class FullStackWebApplication {
 
 		kmRepo.save(new KMCatalogEntry(1L, "Firewall Configuration", "Claire Smith", "UnitB", s.getCategoryName(), d.getCommunityName(), m.getProductName(), "firewall_config.pdf"));
         kmRepo.save(new KMCatalogEntry(2L, "pH Monitoring", "Jason Lloyd", "UnitD", x.getCategoryName(), e.getCommunityName(), n.getProductName(), "contaminated_sample_procedure.pdf"));
-        kmRepo.save(new KMCatalogEntry(3L, "Airflow Simulation", "Henry Wagner", "UnitB", z.getCategoryName(), y.getCommunityName(), o.getProductName(), "airflow_sim.pdf"));
+        kmRepo.save(new KMCatalogEntry(3L, "Airflow Simulation", "Henry Wagner", "UnitB", z.getCategoryName(), b.getCommunityName(), o.getProductName(), "airflow_sim.pdf"));
 
 		kmRepo.save(new KMCatalogEntry(1L, "TFS", "Aiden Key", "UnitA", s.getCategoryName(), a.getCommunityName(), p.getProductName(), "tfs_usermanual.pdf"));
         kmRepo.save(new KMCatalogEntry(2L, "Engine Simulation", "Jane Smith", "UnitC", y.getCategoryName(), f.getCommunityName(), q.getProductName(), "engine_sim.pdf"));

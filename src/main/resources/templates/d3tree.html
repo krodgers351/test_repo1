@@ -9,7 +9,7 @@
     <script th:src="@{/js/lib/d3.min.js}" src="../../js/lib/d3.min.js" type="text/javascript"></script>
 
     <script th:inline="javascript" type="text/javascript">
-        var group = "Root";
+        var group = "Company";
 
         $("document").ready(function (e) {
             /*<![CDATA[*/
@@ -48,7 +48,7 @@
             KMTree.push({ "name": group, "children": [] });
             KMTree[0].children.push({ "name": "Products", "children": [] });
             KMTree[0].children.push({ "name": "Community", "children": [] });
-            KMTree[0].children.push({ "name": "Audience", "children": [] });
+            KMTree[0].children.push({ "name": "Department", "children": [] });
             /*<![CDATA[*/
             for (var i = 0; i < json.length; i++) {
                 var jsonObj = {};
@@ -140,7 +140,7 @@
 
         function buildTree(data) {
             /*<![CDATA[*/
-            var margin = { top: 20, right: 20, bottom: 20, left: 90 }, width = 1060 - margin.right - margin.left, height = 500 - margin.top - margin.bottom;
+            var margin = { top: 20, right: 5, bottom: 20, left: 75 }, width = 1060 - margin.right - margin.left, height = 500 - margin.top - margin.bottom;
 
             var i = 0;
             duration = 750;
@@ -151,7 +151,8 @@
                 .projection(function (d) { return [d.y, d.x]; });
 
             var svg = d3.select("#treeDiv").append("svg")
-                .attr("width", width + margin.right + margin.left)
+                //.attr("width", width + margin.right + margin.left)
+                .attr("width", $("svg").parent().width())
                 .attr("height", height + margin.top + margin.bottom)
                 .append("g")
                 .attr("transform", "translate(" + margin.left + "," + margin.top + ")");

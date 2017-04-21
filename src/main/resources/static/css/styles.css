@@ -91,12 +91,13 @@ input {
 }
 
 input[type="text"] {
-    width: 400px;
+    width: 300px;
 }
 
 table {
-	border-spacing: 10px;
+    border-spacing: 10px;
     border-collapse: separate;
+    border-radius: 15px 15px 15px 15px;
 }
 
 th {
@@ -210,7 +211,7 @@ a:active, nav a:active {
 .node text {
     font: 12px sans-serif;
     font-weight: bold;
-
+    font-family: Orbitron, Arial, sans-serif;
 }
 
 .link {

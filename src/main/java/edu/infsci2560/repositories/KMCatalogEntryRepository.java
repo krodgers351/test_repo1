@@ -12,4 +12,4 @@ import org.springframework.data.repository.PagingAndSortingRepository;
  *
  * @author KRodgers
  */
-public interface KMCatalogEntryRepository extends PagingAndSortingRepository<KMCatalogEntry, Long> {}
+public interface KMCatalogEntryRepository extends PagingAndSortingRepository<KMCatalogEntry, Long>, JpaRepository<Article, Long> {}

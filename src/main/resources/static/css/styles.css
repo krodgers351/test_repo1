@@ -90,6 +90,14 @@ input {
 	margin-bottom: 4px;
 }
 
+input[type="text"] {
+    width: 200px;
+}
+
+:required {
+    background: red;
+}
+
 table {
 	border-spacing: 10px;
     border-collapse: separate;

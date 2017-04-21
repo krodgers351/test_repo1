@@ -9,12 +9,8 @@
     "\\src\\main\\resources\\static\\css",
     "\\src\\main\\resources\\static\\js",
     "\\src\\main\\resources\\templates",
-    "\\src\\test",
-    "\\src\\test\\java",
-    "\\src\\test\\java\\edu",
-    "\\src\\test\\java\\edu\\infsci2560",
-    "\\src\\test\\java\\edu\\infsci2560\\controllers"
+    "\\src\\test"
   ],
-  "SelectedNode": "\\CHANGELOG.md",
+  "SelectedNode": "\\src\\main\\resources\\static\\css\\styles.css",
   "PreviewInSolutionExplorer": false
 }

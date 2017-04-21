@@ -293,6 +293,14 @@
             console.log(json);
             var $table = $('#tblListData'); //create table variable from DOM table object
             $table.empty(); //clear the table
+            var $row = $('<tr />'); //create new table row
+            $row.append('<th>Title</th>');
+            $row.append('<th>Document Category</th>');
+            $row.append('<th>Product</th>');
+            $row.append('<th>Community</th>');
+            $row.append('<th>Audience</th>');
+            $row.append('<th>Filename</th>');
+            $table.append($row); //append the row with values to the table
             for (var i = 0; i < json.length; i++) { //iterate through JSON array
                 var $row = $('<tr />'); //create new table row
                 //append JSON properties to the row's cells
@@ -310,7 +318,7 @@
 </head>
 <body>
     <header>
-        <h1 data-th-inline="text"><img th:src="@{/images/logo.jpg}" alt="" />Knowledge Management System</h1>
+        <h1 data-th-inline="text"><img th:src="@{/images/logo2.png}" alt="" />Knowledge Management System</h1>
     </header>
     <section id="nav">
         <nav>
@@ -330,16 +338,7 @@
             <button id="btnToggleDocuments">Toggle Document List</button>
         </div> 
         <div>
-            <table id="tblListData">
-                <tr>
-                    <th>Title</th>
-                    <th>Document Category</th>
-                    <th>Product</th>
-                    <th>Community</th>
-                    <th>Audience</th>
-                    <th>Filename</th>
-                </tr>
-            </table>
+            <table id="tblListData"></table>
         </div>
     </section>
 </body>

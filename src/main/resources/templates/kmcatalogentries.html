@@ -49,7 +49,7 @@
                 dataType: "json",
                 success: function (data, status, jqXHR) { //on successful ajax call
                     if (targetDOM == "audience") {
-                        creatDocOptions(data);
+                        creatAudienceOptions(data);
                     }
                     if (targetDOM == "doc") {
                         creatDocOptions(data);
@@ -117,7 +117,7 @@
 			<div id="addEntry">
 				<h2>Add Entry to KM Catalog</h2>
 				<form data-th-action="@{/kmcatalogentries/add}" name="addKMCatalogEntryForm" method="post">
-					Title: <input type="text" name="documentTitle" /><br />
+					Title: <input type="text" name="documentTitle" size="35" required/><br />
 					Knowledge Owner: <input type="text" name="knowledgeOwner" /><br />
 					Audience: <input type="text" name="audience" /><br />
                     <select id="audience_selection" name="audience"></select><br />

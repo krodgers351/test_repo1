@@ -6,7 +6,7 @@
     <link rel="stylesheet" type="text/css" th:href="@{/css/styles.css}" href="../../css/styles.css" />
 
     <script th:inline="javascript" type="text/javascript">
-        $('document').ready(function () {
+        $("document").ready(function () {
             $('#txtSearch').keyup(function () { //when a key is released from typing in the search text box
                 var url;
                 var typedText = $('#txtSearch').val(); //typedText equals user entered text
@@ -82,7 +82,7 @@
         </nav>
     </section>
     <section class="content">
-        <input type="text" id="txtSearch" name="txtSearch" value="" placeholder="Enter title">
+        <input type="text" id="txtSearch" name="txtSearch" />
         <div>
             <table id="tblListData"></table>
         </div>

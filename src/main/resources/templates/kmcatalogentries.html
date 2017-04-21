@@ -118,16 +118,16 @@
 				<h2>Add Entry to KM Catalog</h2>
 				<form data-th-action="@{/kmcatalogentries/add}" name="addKMCatalogEntryForm" method="post">
 					Title: <input type="text" name="documentTitle" required="required"/><br />
-					Knowledge Owner: <input type="text" name="knowledgeOwner" /><br />
+					Knowledge Owner: <input type="text" name="knowledgeOwner" required="required"/><br />
 					Audience: 
-                    <select id="audience_selection" name="audience"></select><br />
+                    <select id="audience_selection" name="audience" required="required"></select><br />
                     Document Category:
-                    <select id="doc_cat_selection" name="documentCategory"></select><br />
+                    <select id="doc_cat_selection" name="documentCategory" required="required"></select><br />
 					Community:
-                    <select id="community_selection" name="community"></select><br />
+                    <select id="community_selection" name="community" required="required"></select><br />
                     Product:
-                    <select id="product_selection" name="product"></select><br />
-					Filename: <input type="text" name="documentFilename" /><br />
+                    <select id="product_selection" name="product" required="required"></select><br />
+					Filename: <input type="text" name="documentFilename" required="required"/><br />
 					<input class="button" type="submit" value="Add Catalog Entry"/>
 				</form> 
 			</div>

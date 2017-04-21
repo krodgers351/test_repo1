@@ -91,11 +91,7 @@ input {
 }
 
 input[type="text"] {
-    width: 200px;
-}
-
-:required {
-    background: red;
+    width: 400px;
 }
 
 table {

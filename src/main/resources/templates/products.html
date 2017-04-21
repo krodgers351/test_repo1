@@ -39,7 +39,7 @@
         <div id="addEntry">
             <h2>Add a New Product</h2>
             <form data-th-action="@{/products/add}" name="addProductForm" method="post">
-                Product: <input type="text" name="productName" /><br />
+                Product: <input type="text" name="productName" required="required"/><br />
                 <input class="button" type="submit" value="Add Product" />
             </form>
         </div>

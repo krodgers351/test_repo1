@@ -10,11 +10,18 @@
     <script th:inline="javascript" type="text/javascript">
         $("document").ready(function (e) {
             /*<![CDATA[*/
+            getDataFromWebService(/*[[@{/public/api/departments}]]*/, "audience");
             getDataFromWebService(/*[[@{/public/api/documentcategories}]]*/, "doc");
             getDataFromWebService(/*[[@{/public/api/communities}]]*/, "community");
             getDataFromWebService(/*[[@{/public/api/products}]]*/, "product");
             /*]]>*/
         });
+
+        function creatAudienceOptions(data) {
+            for (var field in data) {
+                $('<option value="' + data[field].departmentName + '">' + data[field].departmentName + '</option>').appendTo('#audience_selection');
+            }
+        }
 
         function creatDocOptions(data) {
             for (var field in data) {
@@ -41,6 +48,9 @@
                 contentType: "application/json; charset=utf-8",
                 dataType: "json",
                 success: function (data, status, jqXHR) { //on successful ajax call
+                    if (targetDOM == "audience") {
+                        creatDocOptions(data);
+                    }
                     if (targetDOM == "doc") {
                         creatDocOptions(data);
                     }
@@ -110,6 +120,7 @@
 					Title: <input type="text" name="documentTitle" /><br />
 					Knowledge Owner: <input type="text" name="knowledgeOwner" /><br />
 					Audience: <input type="text" name="audience" /><br />
+                    <select id="audience_selection" name="audience"></select><br />
                     Document Category:
                     <select id="doc_cat_selection" name="documentCategory"></select><br />
 					Community:

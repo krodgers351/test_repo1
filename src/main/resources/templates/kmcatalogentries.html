@@ -140,46 +140,6 @@
 			<hr />
             <hr />
             <button th:onclick="'javascript:popup()'"></button>
-            <!--
-            <div data-role="main" class="ui-content">
-                <a data-th-href="@{/files}" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all ui-icon-check ui-btn-icon-left">>Upload a File</a>
-
-                <!--<div data-role="popup" id="myPopup" class="ui-content" style="min-width:250px;">
-                    <form method="post" action="/action_page_post.php">
-                        <div>
-                            <h3>Login information</h3>
-                            <label for="usrnm" class="ui-hidden-accessible">Username:</label>
-                            <input type="text" name="user" id="usrnm" placeholder="Username">
-                            <label for="pswd" class="ui-hidden-accessible">Password:</label>
-                            <input type="password" name="passw" id="pswd" placeholder="Password">
-                            <label for="log">Keep me logged in</label>
-                            <input type="checkbox" name="login" id="log" value="1" data-mini="true">
-                            <input type="submit" data-inline="true" value="Log in">
-                        </div>
-                    </form>
-                </div>
-                
-                <div data-role="popup" id="myPopup" class="ui-content" style="min-width:250px;">
-                    <div data-th-if="${message}">
-                        <h2 data-th-text="${message}" />
-                    </div>
-                    <div>
-                        <form data-th-action="@{/files}" name="uploadFileForm" method="POST" enctype="multipart/form-data">
-                            <!--<form data-th-action="@{/files(${_csrf.parameterName}=${_csrf.token})}" name="uploadFileForm" method="POST" enctype="multipart/form-data" >                                
-                            File to upload:<input type="file" name="file" /><br />
-                            <input type="submit" value="Upload" />
-                        </form>
-                    </div>
-                    <div>
-                        <ul>
-                            <li data-th-each="file : ${files}">
-                                <a data-th-href="${file}" data-th-text="${file}"></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            -->
             <hr />
             <a data-th-href="@{/files}">Upload a File</a>
             <hr />

@@ -133,9 +133,11 @@
                     <select id="community_selection" name="community" required="required"></select><br />
                     Product:
                     <select id="product_selection" name="product" required="required"></select><br />
-					Filename: <input type="text" name="documentFilename" required="required"/><button id="btnUpload" th:onclick="'javascript:popup()'">Upload File</button><br />
+					Filename: <input type="text" name="documentFilename" required="required"/><br />
 					<input class="button" type="submit" value="Add Catalog Entry"/>
 				</form> 
+                <hr />
+                <button id="btnUpload" th:onclick="'javascript:popup()'">Upload File</button>
 			</div>
 			<hr />
 			<div id="submitEntry">

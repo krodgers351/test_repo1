@@ -157,6 +157,10 @@ h1 img {
     vertical-align: middle;
 }
 
+h2 {
+    margin-bottom: 15px;
+}
+
 .button:hover {
 	font-weight:900;
 }

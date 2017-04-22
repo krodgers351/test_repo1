@@ -38,10 +38,25 @@
         </div>
         <hr />
         <div id="addEntry">
-            <h2>Add a New Department</h2>
             <form data-th-action="@{/departments/add}" name="addDepartmentForm" method="post">
-                Department: <input type="text" name="departmentName" required="required"/><br />
-                <input class="button" type="submit" value="Add Department" />
+                <table id="tblForm">
+                    <tr>
+                        <th colspan="2"><h2>Add a New Department</h2></th>
+                    </tr>
+                    <tr>
+                        <td>
+                            Department:
+                        </td>
+                        <td>
+                            <input type="text" name="departmentName" required="required" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input class="button" type="submit" value="Add Department" />
+                        </td>
+                    </tr>
+                </table>
             </form>
         </div>
         <hr />

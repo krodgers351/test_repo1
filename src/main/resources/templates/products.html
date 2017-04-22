@@ -37,11 +37,26 @@
             </table>
         </div>
         <hr />
-        <div id="addEntry">
-            <h2>Add a New Product</h2>
+        <div id="addEntry">           
             <form data-th-action="@{/products/add}" name="addProductForm" method="post">
-                Product: <input type="text" name="productName" required="required"/><br />
-                <input class="button" type="submit" value="Add Product" />
+                <table id="tblForm">
+                    <tr>
+                        <th colspan="2"><h2>Add a New Product</h2></th>
+                    </tr>
+                    <tr>
+                        <td>
+                            Product:
+                        </td>
+                        <td>
+                            <input type="text" name="productName" required="required" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input class="button" type="submit" value="Add Product" />
+                        </td>
+                    </tr>
+                </table>
             </form>
         </div>
         <hr />

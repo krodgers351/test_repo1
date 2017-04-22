@@ -38,10 +38,25 @@
         </div>
         <hr />
         <div id="addEntry">
-            <h2>Add a New Community</h2>
             <form data-th-action="@{/communities/add}" name="addCommunityForm" method="post">
-                Community: <input type="text" name="communityName" required="required"/><br />
-                <input class="button" type="submit" value="Add Community" />
+                <table id="tblForm">
+                    <tr>
+                        <th colspan="2"><h2>Add a New Community</h2></th>
+                    </tr>
+                    <tr>
+                        <td>
+                            Community:
+                        </td>
+                        <td>
+                            <input type="text" name="communityName" required="required" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input class="button" type="submit" value="Add Community" />
+                        </td>
+                    </tr>
+                </table>
             </form>
         </div>
         <hr />

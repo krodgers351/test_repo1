@@ -56,14 +56,13 @@ public class KMCatalogEntriesService {
 		Iterable<KMCatalogEntry> allEntries = repository.findAll();
 		Iterable<KMCatalogEntry> returnEntries = new ArrayList<KMCatalogEntry>();
 		for(KMCatalogEntry entry : allEntries){
-			if(entry.getDocumentTitle().toLowerCase().contains(queryString.toLowerCase())
-				|| entry.getKnowledgeOwner().toLowerCase().contains(queryString.toLowerCase())
-				|| entry.getDocumentTitle().toLowerCase().contains(queryString.toLowerCase())
-				|| entry.getAudience().toLowerCase().contains(queryString.toLowerCase())
-				|| entry.getDocumentCategory().toLowerCase().contains(queryString.toLowerCase())
-				|| entry.getProduct().toLowerCase().contains(queryString.toLowerCase())
-				|| entry.getCommunity().toLowerCase().contains(queryString.toLowerCase())
-				|| entry.getDocumentFilename().toLowerCase().contains(queryString.toLowerCase())){
+			if(entry.getDocumentTitle().toLowerCase().contains(searchString.toLowerCase())
+				|| entry.getKnowledgeOwner().toLowerCase().contains(searchString.toLowerCase())
+				|| entry.getAudience().toLowerCase().contains(searchString.toLowerCase())
+				|| entry.getDocumentCategory().toLowerCase().contains(searchString.toLowerCase())
+				|| entry.getProduct().toLowerCase().contains(searchString.toLowerCase())
+				|| entry.getCommunity().toLowerCase().contains(searchString.toLowerCase())
+				|| entry.getDocumentFilename().toLowerCase().contains(searchString.toLowerCase())){
 				((ArrayList<KMCatalogEntry>)returnEntries).add(entry);
 			}
 		}

@@ -80,6 +80,10 @@ and open the template in the editor.
             });
         }
 
+        function popup() {
+            window.open("/files", 'window', 'width=800,height=500');
+        }
+
     </script>
 </head>
 <body>
@@ -129,7 +133,7 @@ and open the template in the editor.
                 <select id="product_selection" name="product" data-th-value="${entry.product}" required="required">
                     <option data-th-value="${entry.product}" data-th-text="${entry.product}" data-th-selected="${entry.product}"></option>
                 </select><br />
-                Filename: <input type="text" name="documentFilename" data-th-value="${entry.documentFilename}" required="required"/><br />
+                Filename: <input type="text" name="documentFilename" data-th-value="${entry.documentFilename}" required="required"/><button id="btnUpload" th:onclick="'javascript:popup()'">Upload New File</button><br />
                 <input type="submit" value="Update Entry" /><br />
             </form>
         </div>

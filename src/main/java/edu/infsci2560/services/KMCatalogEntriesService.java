@@ -52,10 +52,14 @@ public class KMCatalogEntriesService {
     }
 
 	@RequestMapping(value = "/{documentTitle}", method = RequestMethod.GET, produces = "application/json")
-    public ResponseEntity<Iterable<KMCatalogEntry>> list(@PathVariable("documentTitle") Iterable<KMCatalogEntry> l) {
-        HttpHeaders headers = new HttpHeaders();
-		Long lo = new Long(22);
-		return "hello"; 
-        //return new ResponseEntity<>(repository.findOne(lo), headers, HttpStatus.OK);
-    }
+	public String getTitle(@PathVariable String documentTitle){
+		return documentTitle;
+	}
+
+    //public ResponseEntity<Iterable<KMCatalogEntry>> list(@PathVariable("documentTitle") Iterable<KMCatalogEntry> l) {
+    //    HttpHeaders headers = new HttpHeaders();
+	//	Long lo = new Long(22);
+	//	return "hello"; 
+    //    //return new ResponseEntity<>(repository.findOne(lo), headers, HttpStatus.OK);
+    //}
 }

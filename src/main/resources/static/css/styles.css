@@ -248,18 +248,6 @@ a:active, nav a:active {
 }
 
 @font-face {
-    font-family: 'DistantGalaxy';
-    src: url('../fonts/distgrg_-webfont.eot');
-    src: url('../fonts/distgrg_-webfont.eot?#iefix') format('embedded-opentype'), 
-        url('../fonts/distgrg_-webfont.woff2') format('woff2'), 
-        url('../fonts/distgrg_-webfont.woff') format('woff'), 
-        url('../fonts/distgrg_-webfont.ttf') format('truetype'),
-        url('../fonts/distgrg_-webfont.svg#distant_galaxyregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
     font-family: 'Michroma';
     src: url('../fonts/michroma-webfont.eot');
     src: url('../fonts/michroma-webfont.eot?#iefix') format('embedded-opentype'),

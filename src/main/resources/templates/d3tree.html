@@ -69,7 +69,7 @@
                 if ($.inArray(jsonObj["audience"], audience) < 0) {
                     audience.push(jsonObj["audience"]);
                 }
-                jsonObj["link"] = json[i].documentFilename;
+                jsonObj["link"] = "files/" + json[i].documentFilename;
                 jsonArray.push(jsonObj);
             }
             /*]]>*/

@@ -60,6 +60,7 @@ public class KMCatalogEntriesService {
 				returnEntries.add(entry);
 			}
 		}
+		HttpHeaders headers = new HttpHeaders();
 		return new ResponseEntity<>(returnEntries, headers, HttpStatus.OK);
 	}
 

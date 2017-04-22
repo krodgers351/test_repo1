@@ -67,6 +67,18 @@ header {
     margin-left: 20px;
 }
 
+#tblForm td {
+    text-align: right;
+    height: 40px;
+    width: 40%;
+    padding-right: 5px;
+}
+
+#tblForm td + td {
+    text-align: left;
+    width: 60%;
+}
+
 #tblListData {
     font-family: Orbitron, Arial, sans-serif;
     margin-left: 10px;

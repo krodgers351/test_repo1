@@ -123,21 +123,70 @@
 			<div id="addEntry">
 				<h2 id="add">Add Entry to KM Catalog</h2>
 				<form data-th-action="@{/kmcatalogentries/add}" name="addKMCatalogEntryForm" method="post">
-					Title: <input type="text" name="documentTitle" required="required"/><br />
-					Knowledge Owner: <input type="text" name="knowledgeOwner" required="required"/><br />
-					Audience: 
-                    <select id="audience_selection" name="audience" required="required"></select><br />
-                    Document Category:
-                    <select id="doc_cat_selection" name="documentCategory" required="required"></select><br />
-					Community:
-                    <select id="community_selection" name="community" required="required"></select><br />
-                    Product:
-                    <select id="product_selection" name="product" required="required"></select><br />
-					Filename: <input type="text" name="documentFilename" required="required"/><br />
-					<input class="button" type="submit" value="Add Catalog Entry"/>
+                    <table id="tblForm">
+                        <tr>
+                            <td>
+                                Title:
+                            </td>
+                            <td>
+                                <input type="text" name="documentTitle" required="required" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Knowledge Owner:
+                            </td>
+                            <td>
+                                <input type="text" name="knowledgeOwner" required="required" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Audience:
+                            </td>
+                            <td>
+                                <select id="audience_selection" name="audience" required="required"></select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Document Category:
+                            </td>
+                            <td>
+                                <select id="doc_cat_selection" name="documentCategory" required="required"></select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Community:
+                            </td>
+                            <td>
+                                <select id="community_selection" name="community" required="required"></select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Product:
+                            </td>
+                            <td>
+                                <select id="product_selection" name="product" required="required"></select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Filename:
+                            </td>
+                            <td>
+                                <input type="text" name="documentFilename" required="required" /><button id="btnUpload" th:onclick="'javascript:popup()'">Upload File</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input class="button" type="submit" value="Add Catalog Entry" />
+                            </td>
+                        </tr>
+                    </table>
 				</form> 
-                <hr />
-                <button id="btnUpload" th:onclick="'javascript:popup()'">Upload File</button>
 			</div>
 			<hr />
 			<div id="submitEntry">

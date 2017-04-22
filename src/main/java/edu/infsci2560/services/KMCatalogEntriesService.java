@@ -51,12 +51,19 @@ public class KMCatalogEntriesService {
         return new ResponseEntity<>(repository.save(catalogEntry), headers, HttpStatus.OK);
     }
 
-	@RequestMapping(value = "/query/{queryString}", method = RequestMethod.GET, produces = "application/json")
-	public ResponseEntity<Iterable<KMCatalogEntry>> queryRepo(@PathVariable String queryString){
+	@RequestMapping(value = "/search/{searchString}", method = RequestMethod.GET, produces = "application/json")
+	public ResponseEntity<Iterable<KMCatalogEntry>> queryRepo(@PathVariable String searchString){
 		Iterable<KMCatalogEntry> allEntries = repository.findAll();
 		Iterable<KMCatalogEntry> returnEntries = new ArrayList<KMCatalogEntry>();
 		for(KMCatalogEntry entry : allEntries){
-			if(entry.getDocumentTitle().toLowerCase().contains(queryString.toLowerCase())){
+			if(entry.getDocumentTitle().toLowerCase().contains(queryString.toLowerCase())
+				|| entry.getKnowledgeOwner().toLowerCase().contains(queryString.toLowerCase())
+				|| entry.getDocumentTitle().toLowerCase().contains(queryString.toLowerCase())
+				|| entry.getAudience().toLowerCase().contains(queryString.toLowerCase())
+				|| entry.getDocumentCategory().toLowerCase().contains(queryString.toLowerCase())
+				|| entry.getProduct().toLowerCase().contains(queryString.toLowerCase())
+				|| entry.getCommunity().toLowerCase().contains(queryString.toLowerCase())
+				|| entry.getDocumentFilename().toLowerCase().contains(queryString.toLowerCase())){
 				((ArrayList<KMCatalogEntry>)returnEntries).add(entry);
 			}
 		}

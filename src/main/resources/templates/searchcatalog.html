@@ -11,7 +11,7 @@
                 var url;
                 var typedText = $('#txtSearch').val(); //typedText equals user entered text
                 if (typedText.length >= 2) { //if the text entered has 2 or more characters 
-                    url = /*[[@{/public/api/kmcatalogentries?documentTitle=}]]*/ + typedText; //url to bird web service with entered text appended
+                    url = /*[[@{/public/api/kmcatalogentries/search/}]]*/ + typedText; //url to bird web service with entered text appended
                     getDataFromWebService(url); //get data using ajax call from the web service url 
                 }
                 else {

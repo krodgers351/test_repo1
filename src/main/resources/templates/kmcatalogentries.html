@@ -90,16 +90,17 @@
 		<section class="content">
 			<div>
 				<table id="catalog">
-					<tr>
-						<th>ID</th>
-						<th>Title</th>
-						<th>Owner</th>
-						<th>Audience</th>
-						<th>Category</th>
-						<th>Community</th>
+                    <tr>
+                        <th>ID</th>
+                        <th>Title</th>
+                        <th>Owner</th>
+                        <th>Audience</th>
+                        <th>Category</th>
+                        <th>Community</th>
                         <th>Product</th>
-						<th>Filename</th>
-					</tr>                
+                        <th>Filename</th>
+                        <th><a data-th-href="#add">add entry</a>
+                    </tr>                
 					<tr data-th-each="entry : ${kmcatalogentries}">
 						<td data-th-text="${entry.id}"></td>
 						<td data-th-text="${entry.documentTitle}"></td>
@@ -116,7 +117,7 @@
 			</div>
 			<hr />
 			<div id="addEntry">
-				<h2>Add Entry to KM Catalog</h2>
+				<h2 name="add">Add Entry to KM Catalog</h2>
 				<form data-th-action="@{/kmcatalogentries/add}" name="addKMCatalogEntryForm" method="post">
 					Title: <input type="text" name="documentTitle" required="required"/><br />
 					Knowledge Owner: <input type="text" name="knowledgeOwner" required="required"/><br />

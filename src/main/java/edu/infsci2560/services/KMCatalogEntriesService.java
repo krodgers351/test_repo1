@@ -51,8 +51,8 @@ public class KMCatalogEntriesService {
         return new ResponseEntity<>(repository.save(catalogEntry), headers, HttpStatus.OK);
     }
 
-	@RequestMapping(value = "?documentTitle={documentTitle}", method = RequestMethod.GET, produces = "application/json")
-    public ResponseEntity<KMCatalogEntry> list(@PathVariable("documentTitle") String documentTitle) {
+	@RequestMapping(value = "/{documentTitle}", method = RequestMethod.GET, produces = "application/json")
+    public ResponseEntity<KMCatalogEntry> list(@RequestBody("documentTitle") String documentTitle) {
         HttpHeaders headers = new HttpHeaders();
 		Long lo = new Long(22);
         return new ResponseEntity<>(repository.findOne(lo), headers, HttpStatus.OK);

@@ -53,11 +53,11 @@ public class KMCatalogEntriesService {
 
 	@RequestMapping(value = "/query/{queryString}", method = RequestMethod.GET, produces = "application/json")
 	public ResponseEntity<Iterable<KMCatalogEntry>> queryRepo(@PathVariable String queryString){
-		ArrayList<KMCatalogEntry> allEntries = repository.findAll();
-		ArrayList<KMCatalogEntry> returnEntries = new ArrayList<KMCatalogEntry>();
+		Iterable<KMCatalogEntry> allEntries = repository.findAll();
+		Iterable<KMCatalogEntry> returnEntries = new ArrayList<KMCatalogEntry>();
 		for(KMCatalogEntry entry : allEntries){
 			if(entry.getDocumentTitle().toLowerCase().contains(queryString.toLowerCase())){
-				returnEntries.add(entry);
+				((ArrayList<KMCatalogEntry>)returnEntries).add(entry);
 			}
 		}
 		HttpHeaders headers = new HttpHeaders();

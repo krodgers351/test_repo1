@@ -70,31 +70,15 @@ header {
 #tblForm td {
     text-align: right;
     height: 40px;
-    width: 35%;
+    width: 30%;
     padding-right: 5px;
 }
 
 #tblForm td + td {
     text-align: left;
-    width: 65%;
+    width: 70%;
 }
 
-#tblKM td {
-    text-align: right;
-    height: 40px;
-    width: 30%;
-    padding-right: 5px;
-}
-
-#tblKM td + td {
-    text-align: left;
-    width: 55%;
-}
-
-#tblKM td + td + td {
-    text-align: left;
-    width: 15%;
-}
 
 #tblListData {
     font-family: Orbitron, Arial, sans-serif;
@@ -137,7 +121,7 @@ input {
 }
 
 input[type="text"] {
-    width: 270px;
+    width: 300px;
 }
 
 table {

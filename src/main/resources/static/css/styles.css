@@ -79,6 +79,19 @@ header {
     width: 70%;
 }
 
+#tblForm, th {
+    padding: 4px;
+    border-collapse: collapse;
+    border: 1px solid white;
+    color: white;
+}
+
+#tblForm, td {
+    font-size: 12px;
+    padding: 10px;
+    border-collapse: collapse;
+}
+
 
 #tblListData {
     font-family: Orbitron, Arial, sans-serif;
@@ -142,8 +155,6 @@ td {
 	margin: 1px;
 	font-size: 0.9em;
 }
-
-
 
 section {
     overflow: auto;

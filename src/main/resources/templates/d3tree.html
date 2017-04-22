@@ -93,8 +93,7 @@
             }
 
             /*<![CDATA[*/
-            for (var i = 0; i < KMTree[0].children.length; i++) {
-
+            for (var i = 0; i < KMTree[0].children.length; i++) { //dynamically populate static children
                 populateByDocCategory(KMTree[0].children[i].name.toLowerCase(), getGroup(KMTree[0].children[i].name.toLowerCase(), jsonArray), KMTree[0].children[i]);
             }
             /*]]>*/
@@ -115,21 +114,21 @@
 
         function populateByDocCategory(term, nest, node) {
             /*<![CDATA[*/
-            for (var i = 0; i<node.children.length; i++) {
-                for (var j = 0; j < nest.length; j++) {
-                    for (var k = 0; k < nest[j].values.length; k++) {
-                        for (var l = 0; l < nest[j].values[k].values.length; l++) {
-                            if (nest[j].values[k].values[l][term] == node.children[i].name) {
-                                var exists = false;
-                                for (var m = 0; m < node.children[i].children.length; m++) {
+            for (var i = 0; i<node.children.length; i++) { //iterate through children of sent node
+                for (var j = 0; j < nest.length; j++) { //iterate through grouped-by array
+                    for (var k = 0; k < nest[j].values.length; k++) { //iterate through values grouped for each child node
+                        for (var l = 0; l < nest[j].values[k].values.length; l++) { //iterate through values grouped by child node and doc type
+                            if (nest[j].values[k].values[l][term] == node.children[i].name) { //if the current grouped value belongs in child node
+                                var exists = false; //used to push a doc category only once to child
+                                for (var m = 0; m < node.children[i].children.length; m++) { //iterate to see if doc cat has already been added
                                     if (node.children[i].children[m].name == nest[j].values[k].values[l].document_category) {
                                         exists = true;
                                     }
                                 }
-                                if (exists == false) {
+                                if (exists == false) { //if doc cat hasn't been added  then push onto child node
                                     node.children[i].children.push({ "name": nest[j].values[k].values[l].document_category, "children": [] });
                                 }
-                                node.children[i].children[k].children.push(nest[j].values[k].values[l]);
+                                node.children[i].children[k].children.push(nest[j].values[k].values[l]); //push grouped value into correct doc cat
                             }
                         }
                     }

@@ -55,7 +55,7 @@ public class KMCatalogEntriesService {
     public ResponseEntity<Iterable<KMCatalogEntry>> list(@PathVariable("documentTitle") Iterable<KMCatalogEntry> l) {
         HttpHeaders headers = new HttpHeaders();
 		Long lo = new Long(22);
-		return value; 
+		return "hello"; 
         //return new ResponseEntity<>(repository.findOne(lo), headers, HttpStatus.OK);
     }
 }

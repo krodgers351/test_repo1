@@ -51,7 +51,7 @@ public class KMCatalogEntriesService {
         return new ResponseEntity<>(repository.save(catalogEntry), headers, HttpStatus.OK);
     }
 
-	@RequestMapping(value = "/doc/{documentTitle}", method = RequestMethod.GET, produces = "application/json")
+	@RequestMapping(value = "?{documentTitle}", method = RequestMethod.GET, produces = "application/json")
 	public String getTitle(@PathVariable String documentTitle){
 		return documentTitle;
 	}

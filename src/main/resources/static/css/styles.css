@@ -38,12 +38,7 @@ header {
     font-family: Orbitron, Arial, sans-serif;
 }
 
-.popup body {
-    margin: 0px auto;
-    width: 80%;
-    background-color: white;
-    min-height: 100%;
-}
+
 
 .popup li {
     font-size: .70em;

@@ -52,7 +52,7 @@ public class KMCatalogEntriesService {
     }
 
 	@RequestMapping(value = "/{documentTitle}", method = RequestMethod.GET, produces = "application/json")
-    public ResponseEntity<Iterable<KMCatalogEntry>> list() {
+    public ResponseEntity<Iterable<KMCatalogEntry>> list(@PathVariable("documentTitle") Iterable<KMCatalogEntry>) {
         HttpHeaders headers = new HttpHeaders();
 		Long lo = new Long(22);
 		return value; 

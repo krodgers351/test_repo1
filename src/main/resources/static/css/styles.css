@@ -29,6 +29,14 @@ header {
     border-radius: 0px 0px 15px 15px;
 }
 
+.popup {
+    margin: auto;
+    text-align: center;
+    width: 85%;
+    border-radius: 15px 15px 15px 15px;
+    font-family: Orbitron, Arial, sans-serif;
+}
+
 .content {
     float: right;
     width: 83%;

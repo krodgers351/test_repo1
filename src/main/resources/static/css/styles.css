@@ -67,16 +67,21 @@ header {
     margin-left: 20px;
 }
 
-#tblForm td {
+#tblKM td {
     text-align: right;
     height: 40px;
-    width: 40%;
+    width: 30%;
     padding-right: 5px;
 }
 
-#tblForm td + td {
+#tblKM td + td {
     text-align: left;
-    width: 60%;
+    width: 55%;
+}
+
+#tblKM td + td + td {
+    text-align: left;
+    width: 15%;
 }
 
 #tblListData {

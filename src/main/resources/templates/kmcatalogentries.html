@@ -121,9 +121,11 @@
 			</div>
 			<hr />
 			<div id="addEntry">
-				<h2 id="add">Add Entry to KM Catalog</h2>
 				<form data-th-action="@{/kmcatalogentries/add}" name="addKMCatalogEntryForm" method="post">
                     <table id="tblForm">
+                        <tr>
+                            <th colspan="3"><h2 id="add">Add Entry to KM Catalog</h2></th>
+                        </tr>
                         <tr>
                             <td>
                                 Title:
@@ -178,6 +180,9 @@
                             </td>
                             <td>
                                 <input type="text" name="documentFilename" required="required" /><button id="btnUpload" th:onclick="'javascript:popup()'">Upload File</button>
+                            </td>
+                            <td>
+                                <button id="btnUpload" th:onclick="'javascript:popup()'">Upload File</button>
                             </td>
                         </tr>
                         <tr>

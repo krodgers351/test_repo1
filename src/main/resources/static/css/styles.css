@@ -267,6 +267,17 @@ a:active, nav a:active {
     margin-bottom: 8px;
 }
 
+#btnToggleDocuments, #btnUpload {
+    padding: 5px;
+    background-color: lightsteelblue;
+    font-weight: bold;
+    font: 11px Virgo;
+    border-color: steelblue;
+    border-radius: 8px 8px 8px 8px;
+    margin-left: 10px;
+    margin-bottom: 8px;
+}
+
 @font-face {
     font-family: 'Michroma';
     src: url('../fonts/michroma-webfont.eot');

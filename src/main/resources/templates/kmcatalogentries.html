@@ -68,7 +68,7 @@
         }
 
         function popup() {
-            window.open("@{/files}", 'window', 'width=400,height=300');
+            window.open("/files", 'window', 'width=400,height=300');
         }
 
     </script>
@@ -139,7 +139,7 @@
 			</div>
 			<hr />
             <hr />
-            <button th:onclick="'javascript:popup()'"></button>
+            <button id="btnUpload" th:onclick="'javascript:popup()'">Upload File</button>
             <hr />
             <a data-th-href="@{/files}">Upload a File</a>
             <hr />

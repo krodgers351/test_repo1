@@ -13,7 +13,6 @@
             <hr />
             <div>
                 <form data-th-action="@{/files}" name="uploadFileForm" method="POST" enctype="multipart/form-data">
-                    <!--<form data-th-action="@{/files(${_csrf.parameterName}=${_csrf.token})}" name="uploadFileForm" method="POST" enctype="multipart/form-data" >                                -->
                     Choose File:<input type="file" name="file" /><br />
                     <input type="submit" value="Upload" />
                 </form>

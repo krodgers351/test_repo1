@@ -70,10 +70,4 @@ public class KMCatalogEntriesService {
 		return new ResponseEntity<>(returnEntries, headers, HttpStatus.OK);
 	}
 
-    //public ResponseEntity<Iterable<KMCatalogEntry>> list(@PathVariable("documentTitle") Iterable<KMCatalogEntry> l) {
-    //    HttpHeaders headers = new HttpHeaders();
-	//	Long lo = new Long(22);
-	//	return "hello"; 
-    //    //return new ResponseEntity<>(repository.findOne(lo), headers, HttpStatus.OK);
-    //}
 }

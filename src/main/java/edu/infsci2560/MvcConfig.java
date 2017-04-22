@@ -19,6 +19,7 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
 		registry.addViewController("/d3tree").setViewName("d3tree");
 		registry.addViewController("/searchcatalog").setViewName("searchcatalog");
         registry.addViewController("/login").setViewName("login");
+		registry.addViewController("/files").setViewName("files");
     }
 
 }

@@ -7,6 +7,29 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 ### Added
 - TBD.
 
+## [v1.5] - 2017-04-22
+### Added
+- File Upload Storage System (Service, Controller, Error Handling, Properties)
+- File upload HTML page
+- HTML page to search the KM Catalog
+- AJAX call to the kmcatalogentries web services to dynamically build search result table
+- Fonts
+- Javascript functions for file upload popup window
+- AJAX call to the Department web services to dynamically populate form dropdown for audience in kmcatalogentries
+- Anchor in kmcatalogentries html page to go right to the add entry section
+- Anchor in kmcatalogentries html page and kmcatalogentriesedit html page to upload a file
+
+### Changed
+- KM Catalog Entries Service to implement a search feature
+- The HTML pages for better structure
+- styles.css file to add/modify styling
+- FullStackWebApplication file to reflect more document categories, products, and communities
+- FullStackWebApplication file to add more km entries
+- Web security cofig file to allow my css file to find my fonts
+- MvcConfig file to add search and file path
+- D3 javascript for styling/layout and the link path for my file storage system
+- README.md to show changes
+
 ## [v1.4.1] - 2017-03-28
 ### Added
 - EDIT/DELETE controller options for kmcatalogentries
@@ -80,7 +103,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 - Configured developer workspace
 - Deployed to Heroku
 
-[Unreleased]: https://github.com/infsci2560sp17/full-stack-web-krodgers351/compare/v1.4.1...HEAD
+[Unreleased]: https://github.com/infsci2560sp17/full-stack-web-krodgers351/compare/v1.5...HEAD
+[v1.5]: https://github.com/infsci2560sp17/full-stack-web-krodgers351/compare/v1.4.1...v1.5
 [v1.4.1]: https://github.com/infsci2560sp17/full-stack-web-krodgers351/compare/v1.4...v1.4.1
 [v1.4]: https://github.com/infsci2560sp17/full-stack-web-krodgers351/compare/v1.3...v1.4
 [v1.3]: https://github.com/infsci2560sp17/full-stack-web-krodgers351/compare/v1.2...v1.3

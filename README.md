@@ -26,10 +26,15 @@
 
 ## Key Features
 
-TODO : Please list key features of your project.
+List of key features of your project.
 
 * Users can add KM catalog entries to the repository
+* Users can edit KM catalog entries in the repository
+* Users can delete KM catalog entries from the repository 
+* Users can search the KM catalog entries and get results in a table
+* Users can search for KM catalog entries in a dynamically built d3 tree
 * Users can use the KM catalog entries RESTful service to get the entries in JSON format
+* Users can upload files to match a KM catalog entry filename to allow the d3 tree to get that file when the title is clicked
 * Users can add document category entries to the repository
 * Users can use the document category entries RESTful service to get the entries in JSON format
 * Users can add community entries to the repository
@@ -43,73 +48,59 @@ TODO : Please list key features of your project.
 
 ### Landing Page
 
-![Landing Page](https://github.com/krodgers351/repo_for_images/raw/master/LandingPage.JPG)
+![Landing Page](https://github.com/krodgers351/repo_for_images/raw/master/landingpage2.JPG)
 Work in Progress : After the user logs in, they are taken to the landing page. From this page, they can view the KM Catalog entries. They also have the ability to add entries.
 
 ### User Input Form
 
-TODO : please provide a description of at least 1 user input form including a screen shot ![](https://.../image.jpg)
+![KM Catalog Entry Form](https://github.com/krodgers351/repo_for_images/raw/master/kmcatalogform.JPG)
+This application allows users to add km catalog entries to the repository. The form allows the users to enter information about the entry. All
+fields are required. The upload file button is not actually part of the form per se, but positioned there to remind the user to upload a file
+that matches the filename of the entry so the d3 tree will go to it when that entry is clicked on. 
 
 ## API
 
-TODO : please provide a description of at least 1 API including a sample of request data and response data in both XML and JSON format.
+One interface this application has allows for filtered results of the km catalog based off of the text the users enters into a seaarch field.
+For each letter typed or deleted, there is an AJAX call to the service with the typed text passed. The service will filter the km repository entries based on the text.
+The service will return in JSON format the entries that pertain to the search text.
 
 ### API Method 1
 
-    POST photos/:id/tags
+    GET /public/api/kmcatalogentries/search
 
 #### Parameters
 
-- **id** _(required)_ — The Photo ID to add tags for.
-- **tags** _(required)_ — Comma separated tags.
+- **search** _(required)_ — The text to filter the km catalog on. If search is null, then it just calls the km catalog entries service and returns
+all entries.
 
 #### Response
 
-A JSON or XMLobject containing the PhotoID and list of tags accepted.
+JSON containing the list of km entries that contain the search text in any of its properties.
 
 #### Errors
 
-All known errors cause the resource to return HTTP error code header together with a JSON array containing at least 'status' and 'error' keys describing the source of error.
-
-- **404 Not Found** — The photo was not found.
+No, errors. If there aren't any entries that match the search, the API just returns an empty response entity.
 
 #### Example
 
 ##### Request
 
-    POST /v1/photos/123456/tags
+    Get /public/api/kmcatalogentries/sta
 
 ##### Body
 
-    tags=cute,puppy
+    searchText=sta
 
 
 ##### JSON Response
 
-```json
-{
-    "photoId": 123456,
-    "tags": ["cute", "puppy"]
-}
-```
-
-##### XML Response
-
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<PhotoTags>
-    <photoId>123456</PhotoId>
-        <tags>
-            <tag>cute</tag>
-            <tag>puppy</tag>
-        </tags>
-</PhotoTags>
-```
+![Response from WS](https://github.com/krodgers351/repo_for_images/raw/master/search_json_sta.JPG)
+![Response displayed in App](https://github.com/krodgers351/repo_for_images/raw/master/search_result.JPG)
 
 ## Technologies Used
-
-TODO : List all technologies used in your project
 
 - [Spring Boot](https://projects.spring.io/spring-boot/) - Takes an opinionated view of building production-ready Spring applications.
 - [Thymeleaf](http://www.thymeleaf.org/) - Thymeleaf is a modern server-side Java template engine for both web and standalone environments.
 - [Maven](https://maven.apache.org/) - Apache Maven is a software project management and comprehension tool.
+- [jQuery](https://jquery.com/) - jQuery is a fast, small, and feature-rich JavaScript library.
+- [d3](https://d3js.org/) - D3.js is a JavaScript library for manipulating documents based on data. D3 helps you bring data to life using HTML, SVG, and CSS.

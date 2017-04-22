@@ -192,6 +192,16 @@ a:hover{
 	font-size: 101%;
 }
 
+table a:hover {
+    color: #8FA0E6;
+    font-size: 100%;
+}
+
+#link_header {
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+
 nav a:link {
 	text-decoration: none;
 	color:white;

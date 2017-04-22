@@ -139,11 +139,7 @@
 			</div>
 			<hr />
             <hr />
-            <div id="popup">
-                <form data-th-action="'javascript:popup();'" method="post">
-                    <input class="button" type="submit" value="Upload File" />
-                </form>
-            </div>
+            <button th:onclick="'javascript:popup()'"></button>
             <!--
             <div data-role="main" class="ui-content">
                 <a data-th-href="@{/files}" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all ui-icon-check ui-btn-icon-left">>Upload a File</a>

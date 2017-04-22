@@ -98,6 +98,11 @@ header {
     margin-left: 10px;
 }
 
+hr{
+    margin-bottom: 8px;
+    margin-top: 8px;
+}
+
 #nav {
 	float:left;
 	width:15%;

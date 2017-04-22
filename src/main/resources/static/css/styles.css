@@ -44,6 +44,10 @@ header {
     min-height: 100%;
 }
 
+    .popup li {
+        font-size: .50em;
+    }
+
 .content {
     float: right;
     width: 83%;

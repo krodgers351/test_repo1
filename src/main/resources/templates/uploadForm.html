@@ -5,7 +5,7 @@
         <link rel="stylesheet" type="text/css" th:href="@{/css/styles.css}" href="../../css/styles.css" />      
     </head>
     <body>
-        <section class="popup">
+        <div class="popup">
             <div data-th-if="${message}">
                 <h2 data-th-text="${message}" />
             </div>
@@ -23,6 +23,6 @@
                     </li>
                 </ul>
             </div>
-        </section>
+        </div>
     </body>
 </html>
